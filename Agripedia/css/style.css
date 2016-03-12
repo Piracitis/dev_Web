@@ -1,0 +1,35 @@
+﻿#accessibility_pan {
+    margin: 0 auto;
+    padding: 0;
+    color: #FFF;
+
+    height: 32px;
+}
+
+    #accessibility_pan ul {
+        float: right;
+        margin: 0 0 5px;
+        padding: 0;
+    width: 620px;
+}
+
+    #accessibility_pan li {
+        list-style-type: none;
+        display: inline;
+        margin: 25px 0;
+        padding: 0 10px;
+        color: #fff;
+        border-right: 1px solid #f5f5f5;
+    }
+
+    #accessibility_pan li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    #accessibility_pan img {
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border: none;
+    }

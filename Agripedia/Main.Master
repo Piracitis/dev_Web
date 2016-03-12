@@ -1,0 +1,90 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Main.master.vb" Inherits="Agripedia.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Guide to Farming in India</title>
+
+    <link href="css/MainPage.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/MainStyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all" />
+    <script class="cssdeck" src="js/jquery.min.js"></script>
+      <script class="cssdeck" src="js/jquery.js"></script>
+    <script class="cssdeck" src="js/bootstrap.min.js"></script>
+    <!--//theme-style-->
+
+</head>
+<body>
+        <!--header-->      
+        <div class="header" >
+        <div id="accessibility_pan" class="bordered" style=" margin-left: 8%; margin-right: 7%;">
+            <ul>
+                <li class="Aboutus"><a href="aboutus.aspx">About Us</a></li>
+                <li class="Contact_us"><a href="Contactus.aspx">Contact Us</a></li>
+                <li class="Sitemap"><a href="Sitemap.aspx">Sitemap</a></li>
+                <li class="Disclaimer"><a href="Disclaimer.aspx">Disclaimer</a></li>
+                <li>
+                    <a href="#" title="Decrease Text">
+                        <img id="decfont" src="images/a_decrease.png" alt="Decrease Text" height="19" border="0" width="20" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Normal Text">
+                        <img id="normtext" src="images/normal_icon.png" alt="Normal Text" height="19" border="0" width="20" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Increase Text">
+                        <img id="incfont" src="images/a_increase.png" alt="Increase Text" height="19" border="0" width="20" /></a></li>
+            </ul>              
+            
+        </div>
+
+        <div class="container">
+            <div class="logo">
+                <h1>
+                    <a href="HomePage.aspx">
+                        Agriculture Info
+                    </a>
+                </h1>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li class="active"><a href="HomePage.aspx" class="scroll">Home</a></li>
+                    <li class="active"><a href="Agriculture.aspx" class="scroll">Agriculture</a></li>
+                    <li><a href="MarketInformation.aspx" class="scroll">Market Information</a></li>
+                    <li><a href ="Policies.aspx" class="scroll">Policies and schemes</a></li>
+                    <li><a href="Classifieds.aspx" class="scroll">Classifieds</a></li>
+                    <li><a href="LoginPage.aspx" class="scroll">Login</a></li>
+                </ul>
+                <!--script-->
+                <script>
+						$("span.menu").click(function(){
+							$(".top-nav ul").slideToggle(500, function(){
+							});
+						});
+                </script>
+            </div>
+            
+        </div>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    </div>
+
+        <%--<div id ="navigator">
+            <asp:Label Text ="Home" ID ="lbl_nav" runat ="server" Enabled ="False">
+
+            </asp:Label>
+        </div>--%>
+    
+         
+    <asp:ContentPlaceHolder ID="placeholder" runat="server">
+        <p>
+            <br />
+        </p>
+        <p>
+        </p>
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
