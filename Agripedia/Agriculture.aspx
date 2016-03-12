@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container-fluid">
         <div class="container">
-            <div class="row" style =" margin-top : 3%">
+            <div class="row" style =" margin-top : 2.8%">
                 <div class="col-md-2 hidden-xs">
                     <div id="something" style="margin-top: 2%">
                     </div>
