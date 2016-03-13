@@ -17,7 +17,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -41,7 +40,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Piracitis <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a href="Dashboard.aspx">
+                                            <a href="UserDashboard.aspx">
                                                 <div>
                                                     <strong>Dashboard</strong>
                                                 </div>
@@ -53,10 +52,10 @@
 
                                         <li role="presentation" class="dropdown-header">Account Actions</li>
                                         <li>
-                                            <a href="http://phpoll.com/dashboard/account">My Account</a>
+                                            <a href="MyAccount.aspx">My Account</a>
                                         </li>
                                         <li class="">
-                                            <a href="http://phpoll.com/logout">Logout</a>
+                                            <a href="Logout.aspx">Logout</a>
                                         </li>
 
                                     </ul>
@@ -92,9 +91,6 @@
         </div>
         <asp:ContentPlaceHolder ID="placeholder" runat="server">
         </asp:ContentPlaceHolder>
-
-    </form>
-
 </body>
 </html>
 

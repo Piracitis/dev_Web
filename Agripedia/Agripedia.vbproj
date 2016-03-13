@@ -93,13 +93,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agriculture.aspx" />
-    <Content Include="Changepassword.aspx" />
+    <Content Include="AccountRecovery.aspx" />
+    <Content Include="ChangeEmail.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Contactus.aspx" />
-    <Content Include="Dashboard.aspx" />
+    <Content Include="MyAccount.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MainPage.aspx" />
-    <Content Include="MasterInformation.aspx" />
+    <Content Include="MarketInformation.aspx" />
     <Content Include="NewHome.aspx" />
     <Content Include="Recovery.aspx" />
     <Content Include="Register.aspx" />
@@ -112,11 +114,25 @@
       <DependentUpon>Agriculture.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Changepassword.aspx.designer.vb">
-      <DependentUpon>Changepassword.aspx</DependentUpon>
+    <Compile Include="AccountRecovery.aspx.designer.vb">
+      <DependentUpon>AccountRecovery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Changepassword.aspx.vb">
-      <DependentUpon>Changepassword.aspx</DependentUpon>
+    <Compile Include="AccountRecovery.aspx.vb">
+      <DependentUpon>AccountRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ChangeEmail.aspx.designer.vb">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeEmail.aspx.vb">
+      <DependentUpon>ChangeEmail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contactus.aspx.designer.vb">
@@ -126,11 +142,11 @@
       <DependentUpon>Contactus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard.aspx.designer.vb">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="MyAccount.aspx.designer.vb">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.aspx.vb">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="MyAccount.aspx.vb">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="HomePage.aspx.designer.vb">
@@ -175,11 +191,11 @@
       <DependentUpon>MainPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterInformation.aspx.designer.vb">
-      <DependentUpon>MasterInformation.aspx</DependentUpon>
+    <Compile Include="MarketInformation.aspx.designer.vb">
+      <DependentUpon>MarketInformation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterInformation.aspx.vb">
-      <DependentUpon>MasterInformation.aspx</DependentUpon>
+    <Compile Include="MarketInformation.aspx.vb">
+      <DependentUpon>MarketInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

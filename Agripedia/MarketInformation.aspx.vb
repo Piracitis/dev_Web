@@ -3,7 +3,7 @@ Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
 
-Public Class MasterInformation
+Public Class MarketInformation
     Inherits System.Web.UI.Page
 
     Dim dataAdapter As SqlDataAdapter

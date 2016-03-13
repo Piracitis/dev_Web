@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="LoginPage.aspx.vb" Inherits="Agripedia.LoginPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
-    <div class="container"  style ="margin-top : 1%">
+    <div class="container" style="margin-top: 1%">
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
                 <div class="alert-placeholder"></div>
@@ -15,20 +15,20 @@
                                 <form id="login-form" action="process.aspx" method="post" role="form">
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input name="username" id="username" class="form-control" placeholder="Username" value="" autocomplete="off" type="text"/>
+                                        <input name="username" id="username" class="form-control" placeholder="Username" value="" autocomplete="off" type="text" />
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input name="password" id="password"  class="form-control" placeholder="Password" autocomplete="off" type="password"/>
+                                        <input name="password" id="password" class="form-control" placeholder="Password" autocomplete="off" type="password" />
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                                 <a href="register.aspx" tabindex="6" class="form-control btn btn-primary">Register</a>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <input name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In" type="submit"/>
+                                                <input name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In" type="submit" />
                                             </div>
                                         </div>
                                     </div>
@@ -47,6 +47,33 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default dropshadow">
+                    <div class="panel-body">
+                        <div>
+                            <div class="text-center">
+                                <h4>Create An Account</h4>
+                            </div>
+                            <div>
+                                Creating an account will allow you access to wide range of features.<br />
+                                You can:
+                                <ol>
+                                    <li>Create a forum and discuss with fellow farmers</li>
+                                    <li>Access to chat system</li>
+                                    <li></li>
+                                    <li>Access to shopping portal</li>
+                                    <li>And more</li>
+                                </ol>
+                                <br />
+                                It's Absolutely Free
+                                <br />
+                                Click <a href="register" title="Register Here">here</a> to create your account now
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </asp:Content>

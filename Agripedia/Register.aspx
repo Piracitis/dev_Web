@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container">
         <div class="row">
-            <div class="alertBox" style ="display : none">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>You have successfully registered and can now login.
+            <div class="alertBox" style="display: none">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>You have successfully registered and can now login.
             </div>
         </div>
         <div class="row">
@@ -47,6 +47,30 @@
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="panel panel-default dropshadow">
+                    <div class="panel-body">
+                        <div>
+                            <div class="text-center">
+                                <h4>Create An Account</h4>
+                            </div>
+                            <div>
+                                Creating an account will allow you access to wide range of features.<br />
+                                You can :
+                                <ol>
+                                    <li>Create and pariticipate in our discussion forum</li>
+                                    <li>Access to chat system</li>
+                                    <li>Get notification of articles and posts added</li>
+                                    <li>Access to shopping portal</li>
+                                    <li>And more</li>
+                                </ol>
+                                <br /> It's Absolutely Free <br/>
+                                Click <a href="register" title="Register Here">here</a> to create your account now
                             </div>
                         </div>
                     </div>

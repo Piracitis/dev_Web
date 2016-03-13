@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="MasterInformation.aspx.vb" Inherits="Agripedia.MasterInformation" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="MarketInformation.aspx.vb" Inherits="Agripedia.MarketInformation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
+    <form runat="server">
 
-    <form runat="server" action ="MasterInformation.aspx" method ="post">
         <div class="container-fluid">
             <div class="row">
                 <div class="container-fluid">
@@ -108,8 +108,8 @@
                                         <ul class="nav navbar-nav">
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sort By<strong class="caret"></strong></a>
-                                                <asp:ListBox class="dropdown-menu" ID="lstBox_sort" runat="server" OnSelectedIndexChanged ="Page_Load">
-                                                    
+                                                <asp:ListBox class="dropdown-menu" ID="lstBox_sort" runat="server" OnSelectedIndexChanged="Page_Load">
+
                                                     <asp:ListItem Value="0">Price</asp:ListItem>
                                                     <asp:ListItem Value="1">Name</asp:ListItem>
                                                 </asp:ListBox>
@@ -120,13 +120,13 @@
                                             <li class="dropdown">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Select Year<strong class="caret"></strong></a>
                                                 <asp:ListBox class="dropdown-menu" ID="lstBox_year" runat="server">
-                                                    
-                                                        
+
+
                                                     <asp:ListItem Value="0">2015-16</asp:ListItem>
                                                     <asp:ListItem Value="1">2014-15</asp:ListItem>
                                                     <asp:ListItem Value="3">2013-14</asp:ListItem>
-                                                    
-                                                    
+
+
 
                                                 </asp:ListBox>
                                             </li>
@@ -160,7 +160,7 @@
                                     <Columns>
                                         <asp:BoundField DataField="Commodity" HeaderText="Commodity" />
                                         <asp:BoundField DataField="Variety" HeaderText="Varities" />
-                                        
+
                                         <asp:BoundField DataField="MSP_2015" HeaderText="MSP 2014-15" />
                                         <asp:BoundField DataField="MSP_2016" HeaderText="MSP 2015-16" />
                                         <asp:BoundField DataField="Increase" HeaderText="Increase" />
@@ -176,6 +176,7 @@
                 </div>
             </div>
         </div>
+
     </form>
     <script>
         $('.tree-toggle').click(function () {

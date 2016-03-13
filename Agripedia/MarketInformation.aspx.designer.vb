@@ -11,8 +11,8 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class MasterInformation
-    
+Partial Public Class MarketInformation
+
     '''<summary>
     '''ScriptManager1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class MasterInformation
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-    
+
     '''<summary>
     '''lstBox_sort control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class MasterInformation
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lstBox_sort As Global.System.Web.UI.WebControls.ListBox
-    
+
     '''<summary>
     '''lstBox_year control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class MasterInformation
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lstBox_year As Global.System.Web.UI.WebControls.ListBox
-    
+
     '''<summary>
     '''GridView1 control.
     '''</summary>

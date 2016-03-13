@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class ChangePassword1
+Partial Public Class ChangeEmail
 End Class

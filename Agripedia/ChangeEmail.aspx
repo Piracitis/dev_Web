@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="ChangePassword.aspx.vb" Inherits="Agripedia.ChangePassword1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="ChangeEmail.aspx.vb" Inherits="Agripedia.ChangeEmail" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="placeholder" runat="server">
@@ -56,35 +57,31 @@
 
             </div>
             <div class="col-lg-6">
-					<form id="change-password-form" action="#" method="post" role="form" autocomplete="off">
-						<div class="row">
-							<div class="col-lg-8 col-md-8">
-								<div class="panel panel-default">
-									<div class="panel-body">
-										<h3 class="sub-header">New Password</h3>
-										<div class="form-group">
-											<label for="current-password">Current Password</label>
-											<input name="current-password" class="form-control" id="current-password" placeholder="Current Password" value="" type="password"/>
-										</div>
-										<div class="form-group">
-											<label for="new-password">New Password</label>
-											<input name="new-password" class="form-control" id="new-password" placeholder="New Password" value="" type="password"/>
-										</div>
-										<div class="form-group">
-											<label for="confirm-new-password">Confirm Password</label>
-											<input name="confirm-new-password" class="form-control" id="confirm-new-password" placeholder="Confirm Password" value="" type="password"/>
-										</div>
-										<span class="help-block">We'll send you an email whenever your settings have been changed.</span>
-										<div class="form-group">
-											<input name="submit" class="btn btn-default" value="Change Password" type="submit"/>
-										</div>
-										<input class="hide" name="token" id="token" value="fba67a31e3365ad5afcea20742b3c3c1" type="hidden"/>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
+                <form id="change-email-form" action="#" method="post" role="form" autocomplete="off">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <h3 class="sub-header">New Email</h3>
+                                    <div class="form-group">
+                                        <label for="email">New Email</label>
+                                        <input name="email" class="form-control" id="email" placeholder="New Email" value="" type="email"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-email">Confirm Email</label>
+                                        <input name="confirm-email" class="form-control" id="confirm-email" placeholder="Confirm Email" value="" type="email"/>
+                                    </div>
+                                    <span class="help-block">We'll send you an email whenever your settings have been changed.</span>
+                                    <div class="form-group">
+                                        <input name="submit" class="btn btn-default" value="Change Email" type="submit"/>
+                                    </div>
+                                    <input class="hide" name="token" id="token" value="4ccd373afdcf363f13169a97256c0b34" type="hidden"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </asp:Content>
