@@ -93,21 +93,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agriculture.aspx" />
+    <Content Include="Changepassword.aspx" />
     <Content Include="Contactus.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="MasterInformation.aspx" />
+    <Content Include="NewHome.aspx" />
     <Content Include="Recovery.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="Veggie.aspx" />
-    <Content Include="VeggieDetails.aspx" />
+    <Content Include="style.css" />
+    <Content Include="UserDashBoard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agriculture.aspx.vb">
       <DependentUpon>Agriculture.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Changepassword.aspx.designer.vb">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Changepassword.aspx.vb">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contactus.aspx.designer.vb">
       <DependentUpon>Contactus.aspx</DependentUpon>
@@ -116,11 +126,32 @@
       <DependentUpon>Contactus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="HomePage.aspx.designer.vb">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.vb">
       <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoggedIn.Master.designer.vb">
+      <DependentUpon>LoggedIn.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedIn.Master.vb">
+      <DependentUpon>LoggedIn.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogginHome.Master.designer.vb">
+      <DependentUpon>LogginHome.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LogginHome.Master.vb">
+      <DependentUpon>LogginHome.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginPage.aspx.designer.vb">
@@ -170,6 +201,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewHome.aspx.designer.vb">
+      <DependentUpon>NewHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewHome.aspx.vb">
+      <DependentUpon>NewHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Recovery.aspx.designer.vb">
       <DependentUpon>Recovery.aspx</DependentUpon>
     </Compile>
@@ -184,19 +222,12 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Veggie.aspx.designer.vb">
-      <DependentUpon>Veggie.aspx</DependentUpon>
+    <Compile Include="UserDashBoard.aspx.designer.vb">
+      <DependentUpon>UserDashBoard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Veggie.aspx.vb">
-      <DependentUpon>Veggie.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VeggieDetails.aspx.designer.vb">
-      <DependentUpon>VeggieDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VeggieDetails.aspx.vb">
-      <DependentUpon>VeggieDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="UserDashBoard.aspx.vb">
+      <DependentUpon>UserDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -209,6 +240,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
+    <Content Include="LogginHome.Master" />
+    <Content Include="LoggedIn.Master" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Main.Master" CodeBehind="Contactus.aspx.vb" Inherits="Agripedia.Contactus" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Contactus.aspx.vb" Inherits="Agripedia.Contactus" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container" style ="margin-top : 1%">
 			<div class="row">

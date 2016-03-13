@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Main.Master" CodeBehind="Agriculture.aspx.vb" Inherits="Agripedia.Agriculture" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Agriculture.aspx.vb" Inherits="Agripedia.Agriculture" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container-fluid">
@@ -74,7 +74,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/carrot.jpg" alt="...">
                                         <div class="caption text-center">
                                             <h3>Carrot</h3>
                                         </div>
@@ -86,7 +86,7 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/tomatoes.jpg" alt="...">
                                         <div class="caption text-center">
                                             <h3>Tomato</h3>
                                         </div>
@@ -98,9 +98,9 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/cabbage.jpg" alt="...">
                                         <div class="caption text-center">
-                                            <h3>Potato</h3>
+                                            <h3>Cabbage</h3>
                                         </div>
                                         <!--end caption-->
                                         <a href="product.html" class="btn btn-warning" role="button">View more <i class="fa fa-angle-right"></i></a>
@@ -110,9 +110,9 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/Cucumber.jpg" alt="...">
                                         <div class="caption text-center">
-                                            <h3>Brinjal</h3>
+                                            <h3>Cucumber</h3>
                                         </div>
                                         <!--end caption-->
                                         <a href="product.html" class="btn btn-warning" role="button">View more <i class="fa fa-angle-right"></i></a>
@@ -125,7 +125,7 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/chilli_phule_jyoti.jpg" alt="...">
                                         <div class="caption text-center">
                                             <h3>Chilli</h3>
                                         </div>
@@ -137,9 +137,9 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/parsley.jpg" alt="...">
                                         <div class="caption text-center">
-                                            <h3>Some other veggie</h3>
+                                            <h3>Par</h3>
                                         </div>
                                         <!--end caption-->
                                         <a href="product.html" class="btn btn-warning" role="button">View more <i class="fa fa-angle-right"></i></a>
@@ -149,9 +149,9 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/beans.jpg" alt="...">
                                         <div class="caption text-center">
-                                            <h3>Some other veggie</h3>
+                                            <h3>Beans</h3>
                                         </div>
                                         <!--end caption-->
                                         <a href="product.html" class="btn btn-warning" role="button">View more <i class="fa fa-angle-right"></i></a>
@@ -161,9 +161,9 @@
                                 <!--end col-->
                                 <div class="col-sm-6 col-md-3">
                                     <div class="thumbnail">
-                                        <img src="http://placehold.it/500x300" alt="...">
+                                        <img src="images/dill.jpg" alt="...">
                                         <div class="caption text-center">
-                                            <h3>Some other veggie</h3>
+                                            <h3>Dill</h3>
                                         </div>
                                         <!--end caption-->
                                         <a href="product.html" class="btn btn-warning" role="button">View more <i class="fa fa-angle-right"></i></a>

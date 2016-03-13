@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Main.Master" CodeBehind="Register.aspx.vb" Inherits="Agripedia.Register" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Register.aspx.vb" Inherits="Agripedia.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container">

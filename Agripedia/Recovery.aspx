@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Main.Master" CodeBehind="Recovery.aspx.vb" Inherits="Agripedia.Recovery" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Recovery.aspx.vb" Inherits="Agripedia.Recovery" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container">
+
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3" style ="display : none">
                     <button type="button" class="close" data-dismiss="alert">
