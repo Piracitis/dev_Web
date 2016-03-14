@@ -15,7 +15,7 @@
                                 <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Seed Varieties </label>
                                 <ul class="nav nav-list tree">
                                     <li><a href="#">&nbsp&nbsp&nbsp </a></li>
-                                    <li><a href="#">Sizes</a></li>
+                                    <li><a href="#">Size</a></li>
                                     <li>
                                         <label class="tree-toggle nav-header">Forms</label>
                                         <ul class="nav nav-list tree">
