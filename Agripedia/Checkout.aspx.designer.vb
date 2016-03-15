@@ -11,14 +11,23 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Cart
+Partial Public Class Checkout
     
     '''<summary>
-    '''CartDesc control.
+    '''PaymentButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CartDesc As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents PaymentButton As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''CancelOrderButton control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CancelOrderButton As Global.System.Web.UI.WebControls.Button
 End Class

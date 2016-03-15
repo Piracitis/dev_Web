@@ -97,6 +97,8 @@
     <Content Include="Cart.aspx" />
     <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="checkout_Style.css" />
     <Content Include="Contactus.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="HomePage.aspx" />
@@ -142,6 +144,13 @@
     </Compile>
     <Compile Include="ChangePassword.aspx.vb">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Contactus.aspx.designer.vb">

@@ -51,7 +51,7 @@
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                                                <asp:Button name="LogIn" id="LogInButton" TabIndex="4" class="form-control btn btn-success" runat="server" Text="Log In" OnClick ="LogInButton_Click" />
+                                                <asp:Button name="LogIn" id="LogInButton" TabIndex="4" class="form-control btn btn-primary" runat="server" Text="Log In" OnClick ="LogInButton_Click" />
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                                 <asp:Button name="register-submit" ID="RegisterButton" TabIndex="4" class="form-control btn btn-success" runat="server" Text="Register" OnClick="RegisterButton_Click" />
