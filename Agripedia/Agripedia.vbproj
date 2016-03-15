@@ -100,11 +100,14 @@
     <Content Include="Checkout.aspx" />
     <Content Include="checkout_Style.css" />
     <Content Include="Contactus.aspx" />
+    <Content Include="Fruits.aspx" />
+    <Content Include="Herbs.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="LoginPage.aspx" />
-    <Content Include="MainPage.aspx" />
     <Content Include="MarketInformation.aspx" />
+    <Content Include="OtherVeggie.aspx" />
     <Content Include="prodDetailOver.css" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="Recovery.aspx" />
@@ -160,6 +163,27 @@
       <DependentUpon>Contactus.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Fruits.aspx.designer.vb">
+      <DependentUpon>Fruits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fruits.aspx.vb">
+      <DependentUpon>Fruits.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Herbs.aspx.designer.vb">
+      <DependentUpon>Herbs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Herbs.aspx.vb">
+      <DependentUpon>Herbs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="MyAccount.aspx.designer.vb">
       <DependentUpon>MyAccount.aspx</DependentUpon>
     </Compile>
@@ -195,13 +219,6 @@
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainPage.aspx.designer.vb">
-      <DependentUpon>MainPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.aspx.vb">
-      <DependentUpon>MainPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="MarketInformation.aspx.designer.vb">
       <DependentUpon>MarketInformation.aspx</DependentUpon>
     </Compile>
@@ -227,6 +244,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OtherVeggie.aspx.designer.vb">
+      <DependentUpon>OtherVeggie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtherVeggie.aspx.vb">
+      <DependentUpon>OtherVeggie.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.vb">
       <DependentUpon>ProductDetails.aspx</DependentUpon>

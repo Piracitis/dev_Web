@@ -6,7 +6,6 @@
             <div class="col-lg-6 col-lg-offset-3">
             </div>
         </div>
-        SUNDARESH
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
                 <div class="alert-placeholder"></div>

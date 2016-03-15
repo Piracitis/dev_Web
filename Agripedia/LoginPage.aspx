@@ -11,7 +11,7 @@
                         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
                             <div class="alert alert-danger alert-dismissible" role="alert">
                                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                <asp:Label runat ="server" id = "alert" Text = "dsfsdfa" />
+                                <asp:Label runat ="server" id = "alert" Text = "" />
                             </div>
                             <div class="panel panel-success">
                                 <div class="panel-body">

@@ -13,9 +13,18 @@ Public Class LoginPage
 
         End If
 
+        If (Request.QueryString("q") IsNot Nothing) Then
+            Dim state As String = Request.QueryString("q")
+            If (state.Equals("True")) Then
+                Session("LoggedIn") = "False"
+                Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & "False" & "');", True)
+            End If
+        End If
+        'Check if there exists a session variabel called LoggedIn if not create it 
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
         Else
+            'If logged in, redirect to userdashboard
             If (Session("LoggedIn").ToString.Equals("True")) Then
                 Response.Redirect("UserDashBoard.aspx")
             End If
@@ -48,16 +57,14 @@ Public Class LoginPage
                 Dim userid As String = username.Value, passwd As String = password.Value
 
                 Dim commd As String = "Select password from UserData where username = @userid "
-
                 Dim cmd As SqlCommand = New SqlCommand(commd, con)
                 con.Open()
                 cmd.Parameters.Add("@userid", SqlDbType.NChar, 10).Value = userid
 
                 Dim returnValue As String = CType(cmd.ExecuteScalar(), String)
 
-                If (passwd.Equals(returnValue)) Then
-                    MsgBox("Im True")
-                    Session("LoggedIN") = True
+                If (Not passwd.Equals(returnValue)) Then
+                    Session("LoggedIn") = True
                     con.Close()
                     Response.Redirect("UserDashBoard.aspx")
                 Else

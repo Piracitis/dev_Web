@@ -10,9 +10,11 @@ Public Class Register
             MsgBox("Session Does not Exists")
         End If
 
+        'Check if there exists a session variabel called LoggedIn if not create it 
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
         Else
+            'If already loggedIn , redirect to dashboard
             If (Session("LoggedIn").ToString.Equals("True")) Then
                 Response.Redirect("Dashboard.aspx")
             End If

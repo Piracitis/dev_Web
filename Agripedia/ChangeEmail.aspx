@@ -1,6 +1,23 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="ChangeEmail.aspx.vb" Inherits="Agripedia.ChangeEmail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script>
+         function hideLogTab(string) {
+             alert("Alert Tag with state " + string)
+            if (string == "True") {
+                document.getElementById("logUser").style.display = "block";
+                document.getElementById("guestUser").style.display = "none";
+            }
+            else if (string == "False") {
+                document.getElementById("logUser").style.display = "none";
+                document.getElementById("guestUser").style.display = "block";
+            }
+
+            else
+                alert("Vb Code passed invalid string As " + string);
+        }
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="placeholder" runat="server">
     <div class="container">

@@ -95,4 +95,21 @@
             </div>
         </div>
     </div>
+    <script>
+         function hideLogTab(string) {
+             alert("Alert Tag with state " + string)
+            if (string == "True") {
+                document.getElementById("logUser").style.display = "block";
+                document.getElementById("guestUser").style.display = "none";
+            }
+            else if (string == "False") {
+                document.getElementById("logUser").style.display = "none";
+                document.getElementById("guestUser").style.display = "block";
+            }
+
+            else
+                alert("Vb Code passed invalid string As " + string);
+        }
+
+    </script>
 </asp:Content>

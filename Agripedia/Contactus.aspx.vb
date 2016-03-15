@@ -9,10 +9,7 @@
 
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
-        Else
-            If (Session("LoggedIn").ToString.Equals("False")) Then
-                Response.Redirect("LoginPage.aspx")
-            End If
+
         End If
 
         Dim Tstate As String = Session("LoggedIn").ToString

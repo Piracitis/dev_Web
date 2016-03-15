@@ -7,13 +7,12 @@
             MsgBox("Session Does not Exists")
         End If
 
+        'Check if there exists a session variabel called LoggedIn if not create it 
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
-        Else
-            If (Session("LoggedIn").ToString.Equals("False")) Then
-                Response.Redirect("LoginPage.aspx")
-            End If
         End If
+
+        'Session variable exits, if false he has not logged in
 
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)

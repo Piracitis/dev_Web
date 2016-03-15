@@ -7,9 +7,11 @@
             MsgBox("Session Does not Exists")
         End If
 
+        'Check if there exists a session variabel called LoggedIn if not create it 
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
         Else
+            'if doesn't exists, redirect to login page
             If (Session("LoggedIn").ToString.Equals("False")) Then
                 Response.Redirect("LoginPage.aspx")
             End If
