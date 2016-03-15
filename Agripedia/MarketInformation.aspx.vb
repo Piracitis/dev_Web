@@ -9,9 +9,28 @@ Public Class MarketInformation
     Dim dataAdapter As SqlDataAdapter
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load, lstBox_sort.SelectedIndexChanged
+
+
+        If (HttpContext.Current.Session Is Nothing) Then
+            MsgBox("Session Does not Exists")
+        End If
+
+        If (Session("LoggedIn") Is Nothing) Then
+            Session("LoggedIn") = "False"
+        Else
+            If (Session("LoggedIn").ToString.Equals("False")) Then
+                Response.Redirect("LoginPage.aspx")
+            End If
+        End If
+
+        Dim Tstate As String = Session("LoggedIn").ToString
+        Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
+
+
         If Not Me.IsPostBack Then
             Me.BindGrid()
         End If
+
     End Sub
 
     Private Sub BindGrid()

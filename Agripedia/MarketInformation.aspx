@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="MarketInformation.aspx.vb" Inherits="Agripedia.MarketInformation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
-    <form runat="server">
 
         <div class="container-fluid">
             <div class="row">
@@ -177,7 +176,6 @@
             </div>
         </div>
 
-    </form>
     <script>
         $('.tree-toggle').click(function () {
             $(this).parent().children('ul.tree').toggle(200);

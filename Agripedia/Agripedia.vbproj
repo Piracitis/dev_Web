@@ -94,6 +94,7 @@
   <ItemGroup>
     <Content Include="Agriculture.aspx" />
     <Content Include="AccountRecovery.aspx" />
+    <Content Include="Cart.aspx" />
     <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contactus.aspx" />
@@ -102,7 +103,8 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="MainPage.aspx" />
     <Content Include="MarketInformation.aspx" />
-    <Content Include="NewHome.aspx" />
+    <Content Include="prodDetailOver.css" />
+    <Content Include="ProductDetails.aspx" />
     <Content Include="Recovery.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="style.css" />
@@ -119,6 +121,13 @@
     </Compile>
     <Compile Include="AccountRecovery.aspx.vb">
       <DependentUpon>AccountRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.vb">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.vb">
+      <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ChangeEmail.aspx.designer.vb">
@@ -161,13 +170,6 @@
     </Compile>
     <Compile Include="LoggedIn.Master.vb">
       <DependentUpon>LoggedIn.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LogginHome.Master.designer.vb">
-      <DependentUpon>LogginHome.Master</DependentUpon>
-    </Compile>
-    <Compile Include="LogginHome.Master.vb">
-      <DependentUpon>LogginHome.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LoginPage.aspx.designer.vb">
@@ -217,11 +219,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NewHome.aspx.designer.vb">
-      <DependentUpon>NewHome.aspx</DependentUpon>
+    <Compile Include="ProductDetails.aspx.designer.vb">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NewHome.aspx.vb">
-      <DependentUpon>NewHome.aspx</DependentUpon>
+    <Compile Include="ProductDetails.aspx.vb">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Recovery.aspx.designer.vb">
@@ -256,7 +258,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.Master" />
-    <Content Include="LogginHome.Master" />
     <Content Include="LoggedIn.Master" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
