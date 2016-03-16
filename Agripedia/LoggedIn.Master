@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title></title>
     <link href="css/MainPage.css" rel="stylesheet" type="text/css" media="all" />
@@ -14,10 +14,11 @@
     <script class="cssdeck" src="js/jquery.js"></script>
     <script class="cssdeck" src="js/bootstrap.min.js"></script>
     <script>
-         function hideLogTab(string) {
+        function hideLogTab(string,string2) {
             if (string == "True") {
                 document.getElementById("logUser").style.display = "block";
                 document.getElementById("guestUser").style.display = "none";
+                document.getElementById("user").innerText = "Welcome User"
             }
             else if (string == "False") {
                 document.getElementById("logUser").style.display = "none";
@@ -55,34 +56,37 @@
 
                         <div>
                         </div>
-                        <ul runat="server" class="nav navbar-nav navbar-right shifted" id="logUser" style="display: none">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, Piracitis <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="UserDashboard.aspx">
-                                            <div>
-                                                <strong>Dashboard</strong>
-                                            </div>
-                                            <div>View the dashboard</div>
-                                        </a>
-                                    </li>
+                        <form>
+                            <ul class="nav navbar-nav navbar-right shifted" id="logUser" style="display: none">
+                                <li class="dropdown">
+                                    <a href="#" id ="user" class="dropdown-toggle" data-toggle="dropdown" ><span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="UserDashboard.aspx">
+                                                <div>
+                                                    <strong>Dashboard</strong>
+                                                </div>
+                                                <div>View the dashboard</div>
+                                            </a>
+                                        </li>
 
-                                    <li class="divider"></li>
+                                        <li class="divider"></li>
 
-                                    <li role="presentation" class="dropdown-header">Account Actions</li>
-                                    <li>
-                                        <a href="MyAccount.aspx">My Account</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="Logout.aspx">Logout</a>
-                                    </li>
+                                        <li role="presentation" class="dropdown-header">Account Actions</li>
+                                        <li>
+                                            <a href="MyAccount.aspx">My Account</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="Logout.aspx">Logout</a>
+                                        </li>
 
-                                </ul>
-                            </li>
-                        </ul>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </form>
 
-                        <ul runat="server" class="nav navbar-nav navbar-right shifted" id="guestUser" style="display: block">
+
+                        <ul class="nav navbar-nav navbar-right shifted" id="guestUser" style="display: block">
                             <li class=""><a href="LoginPage.aspx">Log In</a></li>
                             <li class=""><a href="Register.aspx">Register</a></li>
                         </ul>
@@ -114,11 +118,11 @@
             </div>
         </div>
     </div>
-   
+
     <asp:ContentPlaceHolder ID="placeholder" runat="server">
     </asp:ContentPlaceHolder>
 
-    
+
 </body>
 </html>
 

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AccountRecover.aspx.vb" Inherits="Agripedia.AccountRecover" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,44 +10,62 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-3">
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" EnablePartialRendering="true" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+
+
+            <ContentTemplate>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                            <div class="alert alert-danger alert-dismissible" id="alertTag" role="alert">
+                                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                <asp:Label runat="server" ID="alert" Text="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <div class="container" style="margin-top: 3%">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
-                <div class="alert-placeholder"></div>
-                <div class="panel panel-success">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="text-center">
-                                    <h2><b>Recover Account</b></h2>
-                                </div>
-                                <form id="Form1" autocomplete="off" runat="server">
-                                    <div class="form-group">
-                                        <label for="new-password">New Password</label>
-                                        <input name="new-password" id="new-password" tabindex="1" class="form-control" placeholder="New Password" autocomplete="off" required="" type="password" />
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                    <div class="alert-placeholder"></div>
+                    <div class="panel panel-success">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="text-center">
+                                        <h2><b>Recover Account</b></h2>
                                     </div>
                                     <div class="form-group">
-                                        <label for="confirm-new-password">Confirm Password</label>
-                                        <input name="confirm-new-password" id="confirm-new-password" tabindex="2" class="form-control" placeholder="Confirm Password" autocomplete="off" required="" type="password" />
+                                        <label for="password">Password</label>
+                                        <input id="password" runat="server" class="form-control" placeholder="Password" autocomplete="off" type="password" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirm Password</label>
+                                        <input name="confirm-password" runat="server" id="confirm_password" class="form-control" placeholder="Confirm Password" autocomplete="off" type="password" />
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-                                                <asp:Button name="recover-submit" runat="server" OnClick = "Button1_Click"  id="Button1" tabindex="3" class="form-control btn btn-success" value="Change Password" type="submit" />
+
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                <asp:Button name="Change-submit" ID="ChangePass" TabIndex="4" class="form-control btn btn-success" runat="server" Text="Change Password" OnClick="ChangePass_Click" />
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>

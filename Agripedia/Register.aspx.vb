@@ -1,6 +1,10 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
+Imports System.Net.Mail
+Imports System.Net
+
+
 Public Class Register
     Inherits System.Web.UI.Page
 
@@ -25,8 +29,10 @@ Public Class Register
     End Sub
 
 
+
     Private Function Validation() As String
         Try
+
             Dim userid As String = username.Value, passwd As String = password.Value, confirm_passwd As String = confirm_password.Value, email_id = email.Value
             Dim alertText As String = ""
             Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
@@ -54,9 +60,6 @@ Public Class Register
                     Return alertText
                 Else
                 End If
-
-
-                MsgBox("everything ok")
                 Dim SessionId As String = Session.SessionID.ToString()
                 Dim reg_date As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
 
@@ -71,8 +74,6 @@ Public Class Register
 
                 cmd1.Parameters.Add("@reg_date", SqlDbType.DateTime, 10).Value = reg_date
                 cmd1.Parameters.Add("@email", SqlDbType.NChar, 20).Value = email_id
-
-                MsgBox(cmd1.CommandText)
 
                 returnValue = cmd1.ExecuteScalar()
                 If (Not returnValue Is Nothing) Then
@@ -94,11 +95,13 @@ Public Class Register
 
     Protected Sub RegisterButton_Click(sender As Object, e As EventArgs)
         Dim text As String = Validation()
+        Dim client As MailSendSMTP = New MailSendSMTP
+
         If (text.Equals("")) Then
-            text = "You have been successfully registered and can now log in"
+            client.SendEmail("sundaresh2912@gmail.com", username.Value, Request, "newuser")
+            text = "A verification link has been sent to your email. Please confirm your email id"
         End If
         alert.Text = text
-        MsgBox(alert.Text)
     End Sub
 
     Protected Sub LogInButton_Click(sender As Object, e As EventArgs)

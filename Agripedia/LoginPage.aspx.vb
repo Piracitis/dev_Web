@@ -33,7 +33,12 @@ Public Class LoginPage
 
     End Sub
 
+
+
+
     Protected Sub loginButton_Click(sender As Object, e As EventArgs)
+
+        Dim userid As String = username.Value, passwd As String = password.Value
         Dim alertText As String = ""
         If (username.Value.Length < 4) Then
             alertText = "Username must be atleast 4 characters length"
@@ -52,7 +57,7 @@ Public Class LoginPage
             Using con As New SqlConnection(constr)
 
 
-                Dim userid As String = username.Value, passwd As String = password.Value
+
 
                 Dim commd As String = "Select password from UserData where username = @userid "
                 Dim cmd As SqlCommand = New SqlCommand(commd, con)
@@ -74,5 +79,15 @@ Public Class LoginPage
         Else
             alert.Text = alertText
         End If
+
+
+
+        'Dim ex As MailSendSMTP = New MailSendSMTP()
+        'ex.
+
+    End Sub
+
+    Protected Sub Button1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("Recovery.aspx")
     End Sub
 End Class

@@ -44,7 +44,7 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="text-center">
-                                                            <a href="Recovery.aspx" class="form-control btn btn-link">Forgot Password?</a>
+                                                            <asp:Button ID="Button1" class="form-control btn btn-link" runat="server" Text="Forgot Password" OnClick="Button1_Click" />
                                                         </div>
                                                     </div>
                                                 </div>
