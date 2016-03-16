@@ -24,6 +24,7 @@ Public Class Register
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
     End Sub
 
+
     Private Function Validation() As String
         Try
             Dim userid As String = username.Value, passwd As String = password.Value, confirm_passwd As String = confirm_password.Value, email_id = email.Value

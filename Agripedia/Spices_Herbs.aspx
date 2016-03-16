@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Agriculture.aspx.vb" Inherits="Agripedia.Agriculture" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server" OnClick="ButtonClick">
-    <form runat="server">
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Spices_Herbs.aspx.vb" Inherits="Agripedia.Herbs" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="placeholder" runat="server">
+      <form runat="server">
         <div class="container-fluid">
             <div class="container">
                 <div class="row" style="margin-top: 2.8%">
@@ -57,104 +58,54 @@
                                 <div class="row">
                                     <div class="col-sm-6 col-md-3">
                                         <div class="thumbnail">
-                                            <img src="images/carrot.jpg" alt="..." />
+                                            <img src="images/cumin.jpg" alt="..." />
                                             <div class="caption text-center">
-                                                <h3>Carrot</h3>
+                                                <h3>cumin</h3>
                                             </div>
                                             <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Carrot" /><i class="fa fa-angle-right"></i>
+                                            <asp:Button class="btn btn-warning" runat="server" OnClick ="ButtonClick" Text="ViewMore" ID="cumin" /><i class="fa fa-angle-right"></i>
                                         </div>
                                         <!--end thumbnail-->
                                     </div>
                                     <!--end col-->
                                     <div class="col-sm-6 col-md-3">
                                         <div class="thumbnail">
-                                            <img src="images/tomatoes.jpg" alt="..." />
+                                            <img src="images/coriander.jpg" alt="..." />
                                             <div class="caption text-center">
-                                                <h3>Tomato</h3>
+                                                <h3>coriander</h3>
                                             </div>
                                             <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Tomato" /><i class="fa fa-angle-right"></i>
+                                            <asp:Button class="btn btn-warning" runat="server" OnClick ="ButtonClick" Text="ViewMore" ID="coriander" /><i class="fa fa-angle-right"></i>
                                         </div>
                                         <!--end thumbnail-->
                                     </div>
                                     <!--end col-->
                                     <div class="col-sm-6 col-md-3">
                                         <div class="thumbnail">
-                                            <img src="images/cabbage.jpg" alt="..." />
+                                            <img src="images/fennel.jpg" alt="..." />
                                             <div class="caption text-center">
-                                                <h3>Cabbage</h3>
+                                                <h3>fennel</h3>
                                             </div>
                                             <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Cabbage" /><i class="fa fa-angle-right"></i>
+                                            <asp:Button class="btn btn-warning" runat="server" OnClick ="ButtonClick" Text="ViewMore" ID="fennel" /><i class="fa fa-angle-right"></i>
                                         </div>
                                         <!--end thumbnail-->
                                     </div>
                                     <!--end col-->
                                     <div class="col-sm-6 col-md-3">
                                         <div class="thumbnail">
-                                            <img src="images/Cucumber.jpg" alt="..." />
+                                            <img src="images/dill.jpg" alt="..." />
                                             <div class="caption text-center">
-                                                <h3>Cucumber</h3>
+                                                <h3>dill</h3>
                                             </div>
                                             <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Cucumber" /><i class="fa fa-angle-right"></i>
+                                            <asp:Button class="btn btn-warning" runat="server" OnClick ="ButtonClick" Text="ViewMore" ID="dill" /><i class="fa fa-angle-right"></i>
                                         </div>
                                         <!--end thumbnail-->
                                     </div>
                                     <!--end col-->
                                 </div>
                                 <!--end row-->
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="thumbnail">
-                                            <img src="images/chilli_phule_jyoti.jpg" alt="..." />
-                                            <div class="caption text-center">
-                                                <h3>Chilli</h3>
-                                            </div>
-                                            <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Chilli" /><i class="fa fa-angle-right"></i>
-                                        </div>
-                                        <!--end thumbnail-->
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="thumbnail">
-                                            <img src="images/parsley.jpg" alt="..." />
-                                            <div class="caption text-center">
-                                                <h3>Parsley</h3>
-                                            </div>
-                                            <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Parsley" /><i class="fa fa-angle-right"></i>
-                                        </div>
-                                        <!--end thumbnail-->
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="thumbnail">
-                                            <img src="images/beans.jpg" alt="..." />
-                                            <div class="caption text-center">
-                                                <h3>Beans</h3>
-                                            </div>
-                                            <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="Beans" /><i class="fa fa-angle-right"></i>
-                                        </div>
-                                        <!--end thumbnail-->
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-sm-6 col-md-3">
-                                        <div class="thumbnail">
-                                            <img src="images/brinjal.jpg" alt="..." />
-                                            <div class="caption text-center">
-                                                <h3>Brinjal</h3>
-                                            </div>
-                                            <!--end caption-->
-                                            <asp:Button class="btn btn-warning" runat="server" OnClick="ButtonClick" Text="ViewMore" ID="brinjal" /><i class="fa fa-angle-right"></i>
-                                        </div>
-                                        <!--end thumbnail-->
-                                    </div>
-                                    <!--end col-->
-                                </div>
                                 <!--end row-->
                             </div>
                             <!--end panel-body-->

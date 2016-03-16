@@ -11,41 +11,41 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Cart
+Partial Public Class Herbs
     
     '''<summary>
-    '''ScriptManager1 control.
+    '''cumin control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    Protected WithEvents cumin As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''UpdatePanel1 control.
+    '''coriander control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents coriander As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''CartDesc control.
+    '''fennel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CartDesc As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents fennel As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''total control.
+    '''dill control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents total As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents dill As Global.System.Web.UI.WebControls.Button
 End Class

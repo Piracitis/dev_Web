@@ -12,5 +12,5 @@ Option Explicit On
 
 
 
-Partial Public Class Herbs
+Partial Public Class Logout
 End Class

@@ -18,7 +18,6 @@ Public Class MarketInformation
         If (Session("LoggedIn") Is Nothing) Then
             Session("LoggedIn") = "False"
         End If
-
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
 

@@ -92,8 +92,8 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AccountRecover.aspx" />
     <Content Include="Agriculture.aspx" />
-    <Content Include="AccountRecovery.aspx" />
     <Content Include="Cart.aspx" />
     <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -101,7 +101,7 @@
     <Content Include="checkout_Style.css" />
     <Content Include="Contactus.aspx" />
     <Content Include="Fruits.aspx" />
-    <Content Include="Herbs.aspx" />
+    <Content Include="Spices_Herbs.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="HomePage.aspx" />
@@ -117,16 +117,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRecover.aspx.designer.vb">
+      <DependentUpon>AccountRecover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountRecover.aspx.vb">
+      <DependentUpon>AccountRecover.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Agriculture.aspx.vb">
       <DependentUpon>Agriculture.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AccountRecovery.aspx.designer.vb">
-      <DependentUpon>AccountRecovery.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AccountRecovery.aspx.vb">
-      <DependentUpon>AccountRecovery.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Cart.aspx.designer.vb">
       <DependentUpon>Cart.aspx</DependentUpon>
@@ -170,11 +170,11 @@
       <DependentUpon>Fruits.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Herbs.aspx.designer.vb">
-      <DependentUpon>Herbs.aspx</DependentUpon>
+    <Compile Include="Spices_Herbs.aspx.designer.vb">
+      <DependentUpon>Spices_Herbs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Herbs.aspx.vb">
-      <DependentUpon>Herbs.aspx</DependentUpon>
+    <Compile Include="Spices_Herbs.aspx.vb">
+      <DependentUpon>Spices_Herbs.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.vb">

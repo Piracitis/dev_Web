@@ -11,6 +11,7 @@
             Session("LoggedIn") = "False"
         End If
 
+
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
     End Sub

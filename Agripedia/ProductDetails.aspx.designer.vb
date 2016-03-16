@@ -14,24 +14,6 @@ Option Explicit On
 Partial Public Class ProductDetails
     
     '''<summary>
-    '''ScriptManager1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-    
-    '''<summary>
-    '''UpdatePanel1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
-    
-    '''<summary>
     '''item_display control.
     '''</summary>
     '''<remarks>
@@ -68,22 +50,22 @@ Partial Public Class ProductDetails
     Protected WithEvents price As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''AddCart control.
+    '''cart control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddCart As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents cart As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''AddWish control.
+    '''wishlist control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddWish As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents wishlist As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Label1 control.

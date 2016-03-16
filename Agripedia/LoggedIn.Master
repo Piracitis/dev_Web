@@ -15,7 +15,6 @@
     <script class="cssdeck" src="js/bootstrap.min.js"></script>
     <script>
          function hideLogTab(string) {
-             alert("Alert Tag with state " + string)
             if (string == "True") {
                 document.getElementById("logUser").style.display = "block";
                 document.getElementById("guestUser").style.display = "none";

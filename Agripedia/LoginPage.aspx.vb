@@ -2,16 +2,13 @@
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
+
+
 Public Class LoginPage
     Inherits System.Web.UI.Page
     Dim reader As SqlDataReader
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-        If (HttpContext.Current.Session Is Nothing) Then
-            MsgBox("Session Does not Exists")
-
-        End If
 
         If (Request.QueryString("q") IsNot Nothing) Then
             Dim state As String = Request.QueryString("q")
@@ -29,6 +26,7 @@ Public Class LoginPage
                 Response.Redirect("UserDashBoard.aspx")
             End If
         End If
+
 
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
