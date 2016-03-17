@@ -53,6 +53,16 @@ Public Class MailSendSMTP
 
             End If
 
+            If (state = "orderplaced") Then
+                mm.Body =
+                "AgriPedia : One Stop for Agriculture Guide <br><br> " +
+                "Congratulations<br><br>" +
+                "Your order has been successfully placed <br> <br>"
+
+
+            End If
+
+
 
             mm.IsBodyHtml = True
             Dim smtp As New SmtpClient()

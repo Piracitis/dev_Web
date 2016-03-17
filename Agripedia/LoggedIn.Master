@@ -89,6 +89,7 @@
                         <ul class="nav navbar-nav navbar-right shifted" id="guestUser" style="display: block">
                             <li class=""><a href="LoginPage.aspx">Log In</a></li>
                             <li class=""><a href="Register.aspx">Register</a></li>
+                            <li class=""<a href ="Cart.aspx">Register</a></li>
                         </ul>
 
                     </div>
@@ -111,7 +112,6 @@
                         <li><a href="Agriculture.aspx" class="scroll">Agriculture</a></li>
                         <li><a href="MarketInformation.aspx" class="scroll">Market Information</a></li>
                         <li><a href="Policies.aspx" class="scroll">Policies and schemes</a></li>
-                        <li><a href="Classifieds.aspx" class="scroll">Classifieds</a></li>
                         <li><a href="LoginPage.aspx" class="scroll">Login</a></li>
                     </ul>
                 </div>
