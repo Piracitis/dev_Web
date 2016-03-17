@@ -11,68 +11,50 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class LoginPage
+Partial Public Class Payment
     
     '''<summary>
-    '''ScriptManager1 control.
+    '''name control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+    Protected WithEvents name As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''UpdatePanel1 control.
+    '''cardnumber control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
+    Protected WithEvents cardnumber As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''alert control.
+    '''cvc control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents alert As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents cvc As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''username control.
+    '''mm control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents username As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents mm As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''password control.
+    '''yyyy control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents password As Global.System.Web.UI.HtmlControls.HtmlInputPassword
-    
-    '''<summary>
-    '''loginButton control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents loginButton As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''Button1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents yyyy As Global.System.Web.UI.HtmlControls.HtmlInputText
 End Class

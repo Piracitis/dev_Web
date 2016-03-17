@@ -101,6 +101,9 @@
     <Content Include="checkout_Style.css" />
     <Content Include="Contactus.aspx" />
     <Content Include="Fruits.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Policies.aspx" />
+    <Content Include="Receipt.aspx" />
     <Content Include="Spices_Herbs.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="MyAccount.aspx" />
@@ -168,6 +171,27 @@
     </Compile>
     <Compile Include="Fruits.aspx.vb">
       <DependentUpon>Fruits.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.vb">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.vb">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Policies.aspx.designer.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Policies.aspx.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Receipt.aspx.designer.vb">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt.aspx.vb">
+      <DependentUpon>Receipt.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Spices_Herbs.aspx.designer.vb">

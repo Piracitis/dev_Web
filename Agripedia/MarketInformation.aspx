@@ -13,56 +13,38 @@
                                     </asp:ScriptManager>
                                 </div>
                                 <ul class="nav nav-list">
-                                    <li>
-                                        <label class="tree-toggle nav-header">Seeds</label>
-                                        <ul class="nav nav-list tree">
-                                            <li>
-                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Seed Varieties </label>
-                                                <ul class="nav nav-list tree">
-                                                    <li><a href="#">&nbsp&nbsp&nbsp </a></li>
-                                                    <li><a href="#">Sizes</a></li>
-                                                    <li>
-                                                        <label class="tree-toggle nav-header">Forms</label>
-                                                        <ul class="nav nav-list tree">
-                                                            <li><a href="#">Horizontal</a></li>
-                                                            <li><a href="#">Vertical</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <label class="tree-toggle nav-header">Responsive</label>
+                                        <label class="tree-toggle nav-header">Input</label>
                                         <ul class="nav nav-list tree">
-                                            <li><a href="#">Overview</a></li>
-                                            <li><a href="#">CSS</a></li>
                                             <li>
-                                                <label class="tree-toggle nav-header">Media Queries</label>
+                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Seeds</label>
                                                 <ul class="nav nav-list tree">
-                                                    <li><a href="#">Text</a></li>
-                                                    <li><a href="#">Images</a></li>
                                                     <li>
-                                                        <label class="tree-toggle nav-header">Mobile Devices</label>
+                                                        <label class="tree-toggle nav-header">
+                                                            <a href="Dealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Seed Varieties</label>
                                                         <ul class="nav nav-list tree">
-                                                            <li><a href="#">iPhone</a></li>
-                                                            <li><a href="#">Samsung</a></li>
+                                                            <li><a href="Agriculture.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kitchen Garden</a></li>
+                                                            <li><a href="Spices_Herbs.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Spices & Herbs</a></li>
+                                                            <li><a href="OtherVeggie.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Other Vegetables</a></li>
+                                                            <li><a href="Fruits.aspx">Fruits</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <label class="tree-toggle nav-header">Coding</label>
+                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Fertilizers</label>
                                                 <ul class="nav nav-list tree">
-                                                    <li><a href="#">JavaScript</a></li>
-                                                    <li><a href="#">jQuery</a></li>
                                                     <li>
-                                                        <label class="tree-toggle nav-header">HTML DOM</label>
-                                                        <ul class="nav nav-list tree">
-                                                            <li><a href="#">DOM Elements</a></li>
-                                                            <li><a href="#">Recursive</a></li>
-                                                        </ul>
+                                                        <label class="tree-toggle nav-header">
+                                                            <a href="FertiDealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="tree-toggle nav-header">
+                                                            <a href="Fertilizers.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Various Fertilizers</a></label>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -176,7 +158,7 @@
             </div>
         </div>
     </form>
-        
+
 
     <script>
         $('.tree-toggle').click(function () {

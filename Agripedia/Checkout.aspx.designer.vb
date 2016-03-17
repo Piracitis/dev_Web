@@ -14,6 +14,69 @@ Option Explicit On
 Partial Public Class Checkout
     
     '''<summary>
+    '''alert control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents alert As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''first control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents first As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''last control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents last As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''address control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents address As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''city control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents city As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''state control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents state As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''email control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents email As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
     '''PaymentButton control.
     '''</summary>
     '''<remarks>

@@ -51,6 +51,15 @@
         </div>
     </form>
 
+        <script>
+        function changeAlert(string) {
+            document.getElementById("alertTag").style.display = "block";
+            if (alert == "invalid")
+                document.getElementById("alertTag").attributes.class = "alert alert-danger"
+            else
+                document.getElementById("alertTag").attributes.class = "alert alert-success"
+        }
+    </script>
 
 
 </asp:Content>

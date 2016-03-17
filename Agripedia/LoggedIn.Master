@@ -89,7 +89,7 @@
                         <ul class="nav navbar-nav navbar-right shifted" id="guestUser" style="display: block">
                             <li class=""><a href="LoginPage.aspx">Log In</a></li>
                             <li class=""><a href="Register.aspx">Register</a></li>
-                            <li class=""<a href ="Cart.aspx">Register</a></li>
+                            <li class=""><a href ="Cart.aspx">Shopping Cart</a></li>
                         </ul>
 
                     </div>

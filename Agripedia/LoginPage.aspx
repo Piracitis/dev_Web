@@ -9,7 +9,7 @@
                 <div class="container" style="margin-top: 1%">
                     <div class="row">
                         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
-                            <div class="alert alert-danger alert-dismissible" role="alert">
+                            <div class="alert alert-danger alert-dismissible" role="alert" id="alertTag" style ="display:none">
                                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                                 <asp:Label runat ="server" id = "alert" Text = "" />
                             </div>
@@ -93,17 +93,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <script>
         function changeAlert(string) {
-            if (string == "InvalidUser") {
-                document.getElementById("logUser").style.display = "block";
-                document.getElementById("guestUser").style.display = "none";
-            }
-            else if (string == "False") {
-                document.getElementById("logUser").style.display = "none";
-                document.getElementById("guestUser").style.display = "block";
-            }
-
+            document.getElementById("alertTag").style.display = "block";
+            if (alert == "invalid")
+                document.getElementById("alertTag").attributes.class = "alert alert-danger"
             else
-                alert("Vb Code passed invalid string As " + string);
+                document.getElementById("alertTag").attributes.class = "alert alert-success"
         }
     </script>
 

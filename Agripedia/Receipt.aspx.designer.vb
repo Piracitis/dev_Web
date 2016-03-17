@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ChangePassword1
+Partial Public Class Receipt
     
     '''<summary>
     '''alert control.
@@ -23,38 +23,20 @@ Partial Public Class ChangePassword1
     Protected WithEvents alert As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Password1 control.
+    '''Name control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Password1 As Global.System.Web.UI.HtmlControls.HtmlInputPassword
+    Protected WithEvents Name As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Password2 control.
+    '''Address control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Password2 As Global.System.Web.UI.HtmlControls.HtmlInputPassword
-    
-    '''<summary>
-    '''Password3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Password3 As Global.System.Web.UI.HtmlControls.HtmlInputPassword
-    
-    '''<summary>
-    '''submit control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents submit As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Address As Global.System.Web.UI.WebControls.Label
 End Class

@@ -50,6 +50,8 @@ Public Class Register
                     Return alertText
                 End If
 
+                Dim address As MailAddress = New MailAddress(email_id)
+
                 If (Not passwd.Equals(confirm_passwd)) Then
                     If (alertText.Equals("")) Then
                         alertText = "<br>Password doesnt match. Please enter same password"

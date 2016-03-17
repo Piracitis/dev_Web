@@ -23,13 +23,18 @@ Public Class LoginPage
         Else
             'If logged in, redirect to userdashboard
             If (Session("LoggedIn").ToString.Equals("True")) Then
-                Response.Redirect("UserDashBoard.aspx")
+                If (Session("check") = "true") Then
+                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
+                Else
+                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
+                End If
             End If
         End If
 
 
+
         Dim Tstate As String = Session("LoggedIn").ToString
-        Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
+            Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
 
     End Sub
 
@@ -67,9 +72,21 @@ Public Class LoginPage
                 Dim returnValue As String = CType(cmd.ExecuteScalar(), String)
 
                 If (Not passwd.Equals(returnValue)) Then
-                    Session("LoggedIn") = True
+                    Session("LoggedIn") = "True"
+
                     con.Close()
-                    Response.Redirect("UserDashBoard.aspx")
+                    Session("username") = username
+
+                    Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+                    aCookie("userid") = userid
+
+                    If (Session("check") = "true") Then
+                        Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
+                    Else
+                        Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
+                    End If
+
+
                 Else
                     alertText = "Username or Password is invalid"
                     alert.Text = alertText
