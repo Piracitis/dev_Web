@@ -17,9 +17,11 @@ Public Class Checkout
         Else
             If (Session("LoggedIn").ToString.Equals("False")) Then
                 Dim meta As HtmlMeta = New HtmlMeta()
-                Session("check") = "True"
+                Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+
+                aCookie("check") = "True"
                 meta.HttpEquiv = "Refresh"
-                meta.Content = "5;url=LoginPage.aspx"
+                meta.Content = "5;url=" + Request.Url.GetLeftPart(UriPartial.Authority) + "/LoginPage.aspx/?q=checkout"
                 Me.Page.Controls.Add(meta)
                 alert.Text = "You are not a registered user. Please Register or log in to purchase. Redirecting to Login/Register page in 5 seconds"
             End If
@@ -39,6 +41,7 @@ Public Class Checkout
             Dim citys As String = city.Value.ToString
             Dim emails As String = email.Value.ToString
             Dim alertText As String = ""
+            Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
 
             Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
             Using con As New SqlConnection(constr)
@@ -47,13 +50,14 @@ Public Class Checkout
 
                 Dim cmd2 As SqlCommand = New SqlCommand(uCommd, con)
                 con.Open()
-                cmd2.Parameters.Add("user", SqlDbType.NChar, 10).Value = "sd"
-                cmd2.Parameters.Add("first", SqlDbType.NChar, 10).Value = firstname
-                cmd2.Parameters.Add("last", SqlDbType.NChar, 10).Value = lastname
-                cmd2.Parameters.Add("add", SqlDbType.NChar, 10).Value = add
-                cmd2.Parameters.Add("email", SqlDbType.NChar, 10).Value = email
-                cmd2.Parameters.Add("citys", SqlDbType.NChar, 10).Value = citys
-                cmd2.Parameters.Add("states", SqlDbType.NChar, 10).Value = states
+                cmd2.Parameters.Add("user", SqlDbType.NChar, 15).Value = aCookie("userid").ToString
+                cmd2.Parameters.Add("first", SqlDbType.NChar, 30).Value = firstname
+                cmd2.Parameters.Add("last", SqlDbType.NChar, 30).Value = lastname
+                cmd2.Parameters.Add("add", SqlDbType.NChar, 30).Value = add
+                cmd2.Parameters.Add("email", SqlDbType.NChar, 30).Value = email
+                cmd2.Parameters.Add("citys", SqlDbType.NChar, 30).Value = citys
+                cmd2.Parameters.Add("states", SqlDbType.NChar, 30).Value = states
+
 
 
                 Session("first") = first.ToString

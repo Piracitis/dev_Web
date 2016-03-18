@@ -23,7 +23,9 @@ Public Class LoginPage
         Else
             'If logged in, redirect to userdashboard
             If (Session("LoggedIn").ToString.Equals("True")) Then
-                If (Session("check") = "true") Then
+                Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+
+                If (aCookie("check").Equals("True")) Then
                     Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
                 Else
                     Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
@@ -49,12 +51,24 @@ Public Class LoginPage
             alertText = "Username must be atleast 4 characters length"
         End If
 
+        If (username.Value.Length > 15) Then
+            alertText = "Username must be less than 15 characters length"
+        End If
+
         If (password.Value.Length < 6) Then
             If (alertText.Equals("")) Then
                 alertText = "Password must be atleast Of 6 characters In length"
 
             End If
             alertText += "<br>Password must be atleast Of 6 characters In length"
+        End If
+
+        If (password.Value.Length > 20) Then
+            If (alertText.Equals("")) Then
+                alertText = "Password must be less tham 20 characters In length"
+
+            End If
+            alertText += "<br>Password must be less than 20 characters In length"
         End If
 
         If (alertText.Equals("")) Then
@@ -80,7 +94,7 @@ Public Class LoginPage
                     Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
                     aCookie("userid") = userid
 
-                    If (Session("check") = "true") Then
+                    If (aCookie("check").Equals("True")) Then
                         Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
                     Else
                         Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")

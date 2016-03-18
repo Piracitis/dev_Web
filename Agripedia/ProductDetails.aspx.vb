@@ -85,55 +85,55 @@ Public Class ProductDetails
 
 
     Protected Sub cart_Click(sender As Object, e As EventArgs)
-        'Try
-        Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
-        aCookie.Item("Cart") = "True"
-        Dim cropname As String = ""
-        If (Request.QueryString("cropname") IsNot Nothing) Then
-            cropname = Request.QueryString("cropname")
-        End If
-        Dim prices As Integer = 50
-        Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
-        Dim cCommd As String = "Select cropname from anonyCart where cropname='@crop'"
-        Dim uCommd As String = "Insert into anonyCart values (@crop,@quantity,@cookie,@price)"
-        Dim update As String = "Update anonyCart set quantity= quantity + 1 where cropname='@crop'"
-        Dim news As String = "Select Price from CropPrice where crop_name=@crop"
-        Dim con As New SqlConnection(constr)
-        Dim cmdObj As New SqlClient.SqlCommand(uCommd, con), cmdObj2 As New SqlClient.SqlCommand(cCommd, con), cmdObj3 As New SqlClient.SqlCommand(update, con), cmdObj4 As New SqlClient.SqlCommand(news, con)
+        Try
+            Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+            aCookie.Item("Cart") = "True"
+            Dim cropname As String = ""
+            If (Request.QueryString("cropname") IsNot Nothing) Then
+                cropname = Request.QueryString("cropname")
+            End If
+            Dim prices As Integer = 50
+            Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
+            Dim cCommd As String = "Select cropname from anonyCart where cropname=@crop"
+            Dim uCommd As String = "Insert into anonyCart values (@crop,@quantity,@cookie,@price)"
+            Dim update As String = "Update anonyCart set quantity= quantity + 1 where cropname=@crop"
+            Dim news As String = "Select Price from CropPrice where crop_name=@crop"
+            Dim con As New SqlConnection(constr)
+            Dim insert As New SqlClient.SqlCommand(uCommd, con), getValues As New SqlClient.SqlCommand(cCommd, con), updateQuer As New SqlClient.SqlCommand(update, con), getPrice As New SqlClient.SqlCommand(news, con)
 
-        con.Open()
-        cmdObj2.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
-        cmdObj3.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
-
-
-        If (cmdObj2.ExecuteReader() Is Nothing) Then
-            con.Close()
             con.Open()
-            cmdObj3.ExecuteScalar()
-            MsgBox("update")
-        Else
-            MsgBox("insert")
-            con.Close()
-            con.Open()
-            cmdObj4.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
-            Dim obj As SqlDataReader = cmdObj4.ExecuteReader
-            obj.Read()
-            prices = CInt(obj("Price"))
+            getValues.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
+            updateQuer.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
+            Dim obj2 As SqlDataReader = getValues.ExecuteReader()
+            If (obj2.Read()) Then
+                con.Close()
+                con.Open()
+                updateQuer.ExecuteScalar()
+                MsgBox("update")
+
+            Else
+                MsgBox("insert")
+                con.Close()
+                con.Open()
+                getPrice.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
+                Dim obj As SqlDataReader = getPrice.ExecuteReader()
+                obj.Read()
+                prices = CInt(obj("Price"))
+
+                con.Close()
+                con.Open()
+
+                insert.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
+                insert.Parameters.Add("@quantity", SqlDbType.Int).Value = 1
+                insert.Parameters.Add("@cookie", SqlDbType.NChar, 50).Value = aCookie.Value
+                insert.Parameters.Add("@price", SqlDbType.NChar, 50).Value = prices
+                insert.ExecuteScalar()
+            End If
 
             con.Close()
-            con.Open()
-
-            cmdObj.Parameters.Add("@crop", SqlDbType.NChar, 20).Value = cropname
-            cmdObj.Parameters.Add("@quantity", SqlDbType.Int).Value = 1
-            cmdObj.Parameters.Add("@cookie", SqlDbType.NChar, 50).Value = aCookie.Value
-            cmdObj.Parameters.Add("@price", SqlDbType.NChar, 50).Value = prices
-            cmdObj.ExecuteScalar()
-        End If
-
-        con.Close()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
