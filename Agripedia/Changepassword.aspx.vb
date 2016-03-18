@@ -22,7 +22,7 @@ Public Class ChangePassword1
     End Sub
 
     Protected Sub submit_Click(sender As Object, e As EventArgs)
-        Dim cpasswd As String, npasswd As String, cnpasswd As String, alertText As String
+        Dim cpasswd As String, npasswd As String, cnpasswd As String, alertText As String = ""
 
         cpasswd = Password1.Value
         npasswd = Password1.Value

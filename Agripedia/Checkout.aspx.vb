@@ -34,12 +34,12 @@ Public Class Checkout
     Private Function Validation() As String
         Try
 
-            Dim firstname As String = first.Value.ToString
-            Dim lastname As String = last.Value.ToString
-            Dim add As String = address.Value.ToString
-            Dim states As String = state.Value.ToString
-            Dim citys As String = city.Value.ToString
-            Dim emails As String = email.Value.ToString
+            Dim firstname As String = first.Text.ToString()
+            Dim lastname As String = last.Text.ToString()
+            Dim add As String = address.Text.ToString()
+            Dim states As String = state.Text.ToString()
+            Dim citys As String = city.Text.ToString()
+            Dim emails As String = email.Text.ToString()
             Dim alertText As String = ""
             Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
 
@@ -50,26 +50,27 @@ Public Class Checkout
 
                 Dim cmd2 As SqlCommand = New SqlCommand(uCommd, con)
                 con.Open()
-                cmd2.Parameters.Add("user", SqlDbType.NChar, 15).Value = aCookie("userid").ToString
+                cmd2.Parameters.Add("user", SqlDbType.NChar, 15).Value = aCookie("userid")
                 cmd2.Parameters.Add("first", SqlDbType.NChar, 30).Value = firstname
                 cmd2.Parameters.Add("last", SqlDbType.NChar, 30).Value = lastname
                 cmd2.Parameters.Add("add", SqlDbType.NChar, 30).Value = add
-                cmd2.Parameters.Add("email", SqlDbType.NChar, 30).Value = email
+                cmd2.Parameters.Add("email", SqlDbType.NChar, 30).Value = emails
                 cmd2.Parameters.Add("citys", SqlDbType.NChar, 30).Value = citys
                 cmd2.Parameters.Add("states", SqlDbType.NChar, 30).Value = states
 
 
 
-                Session("first") = first.ToString
-                Session("last") = last.ToString
-                Session("add") = add.ToString
-                Session("states") = states.ToString
-                Session("citys") = citys.ToString
-                Session("email") = email.ToString
+                Session("first") = firstname
+                Session("last") = lastname
+                Session("add") = add
+                Session("states") = states
+                Session("citys") = citys
+                Session("email") = emails
 
-                cmd2.ExecuteScalar()
+                cmd2.ExecuteNonQuery()
 
-                Return alertText = "Your order has been placed. It will be delivered in 5 working days"
+                alertText = "Your order has been placed. It will be delivered to your location in 5 working days"
+                Return alertText
             End Using
         Catch ex As SqlException
             Return " "
@@ -90,10 +91,10 @@ Public Class Checkout
         Dim text As String = Validation()
         Dim client As MailSendSMTP = New MailSendSMTP
 
-        If (text.Equals("")) Then
+        If (Not text.Equals("")) Then
             client.SendEmail(Session("email").ToString, "", Request, "Order Placed")
         End If
         alert.Text = text
-        Response.Redirect("Reciept.aspx")
+        Response.Redirect("Receipt.aspx")
     End Sub
 End Class

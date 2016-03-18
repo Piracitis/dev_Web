@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class Checkout
-    
+
     '''<summary>
     '''alert control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class Checkout
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents alert As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''first control.
     '''</summary>
@@ -29,8 +29,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents first As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents first As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''last control.
     '''</summary>
@@ -38,8 +38,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents last As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents last As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''address control.
     '''</summary>
@@ -47,8 +47,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents address As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents address As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''city control.
     '''</summary>
@@ -56,8 +56,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents city As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents city As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''state control.
     '''</summary>
@@ -65,8 +65,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents state As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents state As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''email control.
     '''</summary>
@@ -74,8 +74,8 @@ Partial Public Class Checkout
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents email As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
+    Protected WithEvents email As Global.System.Web.UI.WebControls.TextBox
+
     '''<summary>
     '''PaymentButton control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class Checkout
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PaymentButton As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''CancelOrderButton control.
     '''</summary>

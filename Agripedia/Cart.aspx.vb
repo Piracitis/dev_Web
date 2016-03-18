@@ -27,39 +27,45 @@ Public Class Cart
     End Sub
 
     Protected Sub BindGrid(ByVal text As Integer)
-        Dim subtotal As Integer = 0, totals As Integer = 0, price As Integer = 40
-        Dim dt As New DataTable()
-        dt.Columns.AddRange(New DataColumn(3) {New DataColumn("ItemName"), New DataColumn("Unitprice"), New DataColumn("quantity"), New DataColumn("Subtotal")})
-        Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
-        Dim value As String = aCookie.Value
+        Try
 
-        Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
-        Dim cCommd As String = "Select * from anonyCart where cookie=@cookie"
-        Using con As New SqlConnection(constr)
-            Dim cmdObj2 As New SqlClient.SqlCommand(cCommd, con)
+            Dim subtotal As Integer = 0, totals As Integer = 0, price As Integer = 40
+            Dim dt As New DataTable()
+            dt.Columns.AddRange(New DataColumn(3) {New DataColumn("ItemName"), New DataColumn("Unitprice"), New DataColumn("quantity"), New DataColumn("Subtotal")})
+            Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+            Dim value As String = aCookie.Value
 
-            con.Open()
-            cmdObj2.Parameters.Add("@cookie", SqlDbType.NChar, 100).Value = value
-            Using readerObj As SqlClient.SqlDataReader = cmdObj2.ExecuteReader
+            Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
+            Dim cCommd As String = "Select * from anonyCart where cookie=@cookie"
+            Using con As New SqlConnection(constr)
+                Dim cmdObj2 As New SqlClient.SqlCommand(cCommd, con)
 
-                While (readerObj.Read)
-                    price = CInt(readerObj("price"))
-                    Dim quant As Integer = CInt(readerObj("quantity"))
-                    subtotal = price * quant
-                    dt.Rows.Add(readerObj("cropname"), price, quant, subtotal)
-                    totals += subtotal
-                End While
+                con.Open()
+                cmdObj2.Parameters.Add("@cookie", SqlDbType.NChar, 100).Value = value
+                Using readerObj As SqlDataReader = cmdObj2.ExecuteReader
+
+                    While (readerObj.HasRows())
+                        MsgBox("Read")
+                        price = CInt(readerObj("price"))
+                        Dim quant As Integer = CInt(readerObj("quantity"))
+                        subtotal = price * quant
+                        dt.Rows.Add(readerObj("cropname"), price, quant, subtotal)
+                        totals += subtotal
+                    End While
+                End Using
+
+                ViewState("dt") = dt
+                CartDesc.DataSource = dt
+                CartDesc.DataBind()
+                con.Close()
+
+                total.Text = "Total :  " + totals.ToString()
+
             End Using
 
-            ViewState("dt") = dt
-            CartDesc.DataSource = dt
-            CartDesc.DataBind()
-            con.Close()
-
-            total.Text = "Total :  " + totals.ToString()
-
-
-        End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
