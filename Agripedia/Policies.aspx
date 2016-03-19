@@ -5,64 +5,105 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="placeholder" runat="server">
     <form runat="server">
         <div class="container-fluid">
-            <div class="row">
-                <div class="container-fluid">
-                    <div class="container">
-                        <div class="row" style="margin-top: 3%">
-                            <div class="col-md-2 hidden-xs">
-                                <div id="something" style="margin-top: 2%">
-                                    <asp:ScriptManager ID="ScriptManager1" runat="server">
-                                    </asp:ScriptManager>
-                                </div>
-                                <ul class="nav nav-list">
-                                    <li class="divider"></li>
+            <div class="container">
+                <div class="row" style="margin-top: 3%">
+                    <div class="col-md-2 hidden-xs">
+                        <div id="something" style="margin-top: 2%">
+                        </div>
+                        <ul class="nav nav-list">
+                            <li class="divider"></li>
+                            <li>
+                                <label class="tree-toggle nav-header">Input</label>
+                                <ul class="nav nav-list tree">
                                     <li>
-                                        <label class="tree-toggle nav-header">Input</label>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Seeds</label>
                                         <ul class="nav nav-list tree">
                                             <li>
-                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Seeds</label>
-                                                <ul class="nav nav-list tree">
-                                                    <li>
-                                                        <label class="tree-toggle nav-header">
-                                                            <a href="Dealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Seed Varieties</label>
-                                                        <ul class="nav nav-list tree">
-                                                            <li><a href="Agriculture.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kitchen Garden</a></li>
-                                                            <li><a href="Spices_Herbs.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Spices & Herbs</a></li>
-                                                            <li><a href="OtherVeggie.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Other Vegetables</a></li>
-                                                            <li><a href="Fruits.aspx">Fruits</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <label class="tree-toggle nav-header">
+                                                    <a href="Dealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
                                             </li>
                                             <li>
-                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Fertilizers</label>
+                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Seed Varieties</label>
                                                 <ul class="nav nav-list tree">
-                                                    <li>
-                                                        <label class="tree-toggle nav-header">
-                                                            <a href="FertiDealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
-                                                    </li>
-                                                    <li>
-                                                        <label class="tree-toggle nav-header">
-                                                            <a href="Fertilizers.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Various Fertilizers</a></label>
-                                                    </li>
+                                                    <li><a href="Agriculture.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kitchen Garden</a></li>
+                                                    <li><a href="Spices_Herbs.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Spices & Herbs</a></li>
+                                                    <li><a href="OtherVeggie.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Other Vegetables</a></li>
+                                                    <li><a href="Fruits.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fruits</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Fertilizers</label>
+                                        <ul class="nav nav-list tree">
+                                            <li>
+                                                <label class="tree-toggle nav-header">
+                                                    <a href="FertiDealer.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dealers</a></label>
+                                            </li>
+                                            <li>
+                                                <label class="tree-toggle nav-header">
+                                                    <a href="Fertilizers.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Various Fertilizers</a></label>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </div>
-                            <div class="col-md-10">
-                                <h3 class="text-info text-left"></h3>
-                                <h1 id="parent-fieldname-title" class="documentFirstHeading kssattr-atfieldname-title kssattr-templateId-kss_generic_macros kssattr-macro-title-field-view">Technology Mission on Cotton (TMC)
-                                </h1>
-                                <p>
-                                    <div>
+                                <br />
+                            </li>
+                        </ul>
+                        <ul class="nav nav-list">
+                            <li class="divider"></li>
+                            <li>
+                                <label class="tree-toggle nav-header">Best Practices</label>
+                                <ul class="nav nav-list tree">
+                                    <li>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Sustainable Agriculture</label>
+                                        <ul class="nav nav-list tree">
+                                            <li>
+                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Biodiversity</label>
+                                                <ul class="nav nav-list tree">
+                                                    <li><a href="CommunityFor.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Community Managed Forest</a></li>
+                                                    <li><a href="Unculti.aspx">Conservation of uncultivated foods by local communities </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp AgroBased Enterprises Agriculture</label>
+                                        <ul class="nav nav-list tree">
+                                            <li>
+                                                <label class="tree-toggle nav-header">
+                                                    <a href="CaseStudy.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Case Studies - Agro Enterprises</a></label>
+                                            </li>
 
-                                        <ol>
-                                            <li>The Govt. of India launched Technology Mission on Cotton in February 2000. The objective
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <br />
+                            </li>
+                        </ul>
+                        <ul class="nav nav-list">
+                            <li class="divider"></li>
+                            <li>
+                                <label class="tree-toggle nav-header">Market Information</label>
+                                <ul class="nav nav-list tree">
+                                    <li>
+                                        <label class="tree-toggle nav-header"><a href="MarketInformation.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mininum Support Price</a></label>
+                                    </li>
+                                    <li>
+                                        <label class="tree-toggle nav-header">
+                                            <a href="MSPWeb.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Market Information Related Websites</a></label>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-10">
+                        <h3 class="text-info text-left"></h3>
+                        <h1 id="parent-fieldname-title" class="documentFirstHeading kssattr-atfieldname-title kssattr-templateId-kss_generic_macros kssattr-macro-title-field-view">Technology Mission on Cotton (TMC)
+                        </h1>
+
+                        <ol>
+                            <li>The Govt. of India launched Technology Mission on Cotton in February 2000. The objective
                 of TMC was as under:
                 <ol type="a">
                     <li>To improve the yield and quality of cotton, particularly in respect of staple length,
@@ -76,17 +117,17 @@
                         and by modernizing the existing ginning &amp; pressing factories and setting up new
                         units.</li>
                 </ol>
-                                            </li>
-                                            <li>TMC had four Mini Missions as under
+                            </li>
+                            <li>TMC had four Mini Missions as under
                 <ul>
                     <li>Mini Mission I: Cotton Research &amp; Technology Generation </li>
                     <li>Mini Mission II: Transfer of Technology &amp; Development </li>
                     <li>Mini Mission III: Development of Market Infrastructure </li>
                     <li>Mini Mission IV: Modernization / Setting up of new G&amp;P factories.</li>
                 </ul>
-                                                For MM-III &amp; IV Ministry of Textiles was the nodal agency and The Cotton Corporation
+                                For MM-III &amp; IV Ministry of Textiles was the nodal agency and The Cotton Corporation
                 of India Ltd. (CCI) was the implementing agency. </li>
-                                            <li>Achievements
+                            <li>Achievements
                 <ol type="a">
                     <li>MM-III<br />
                         Under Mini Mission-III, there was a target of development of 250 market yards. TMC
@@ -422,20 +463,21 @@
                         at par with the cotton of other exporting countries.<br />
                     </li>
                 </ol>
-                                                <p><strong>The Mini Mission III &amp; IV of TMC closed on 31.12.2010</strong></p>
-                                            </li>
-                                        </ol>
-                                    </div>
-
-
-                                </p>
-                                <p> For more details on such schemes
-                                    <br /> 
-                                    References :  http://agricoop.nic.in/programmescheme.html</p>
-                                <br />
-                            </div>
+                                <p><strong>The Mini Mission III &amp; IV of TMC closed on 31.12.2010</strong></p>
+                            </li>
+                        </ol>
                     </div>
+
+
+                    <p>
+                        For more details on such schemes
+                                    <br />
+                        References :  http://agricoop.nic.in/programmescheme.html
+                    </p>
+                    <br />
                 </div>
+            </div>
+        </div>
     </form>
 
 

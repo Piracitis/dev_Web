@@ -1,23 +1,6 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="ChangePassword.aspx.vb" Inherits="Agripedia.ChangePassword1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script>
-        function hideLogTab(string) {
-            alert("Alert Tag with state " + string)
-            if (string == "True") {
-                document.getElementById("logUser").style.display = "block";
-                document.getElementById("guestUser").style.display = "none";
-            }
-            else if (string == "False") {
-                document.getElementById("logUser").style.display = "none";
-                document.getElementById("guestUser").style.display = "block";
-            }
-
-            else
-                alert("Vb Code passed invalid string As " + string);
-        }
-
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="placeholder" runat="server">
 
@@ -25,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <div class="alert alert-danger alert-dismissible" role="alert" id="alertTag" style="display: none">
+                    <div class="alert alert-danger alert-dismissible" role="alert" id="alertTag" style="display: block">
                         <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                         <asp:Label runat="server" ID="alert" Text="" />
                     </div>
@@ -94,7 +77,6 @@
                                     <div class="form-group">
                                         <asp:Button name="submit" ID="submit" class="btn btn-default" runat="server" OnClick="submit_Click" value="Change Password" type="submit" />
                                     </div>
-                                    <input class="hide" name="token" id="token" value="fba67a31e3365ad5afcea20742b3c3c1" type="hidden" />
                                 </div>
                             </div>
                         </div>

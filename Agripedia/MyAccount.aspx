@@ -63,30 +63,19 @@
                                     <h3>View Account - piracitis</h3>
                                     <div class="form-group">
                                         <label>Username</label>
-                                        <p>piracitis</p>
+                                        <asp:Label runat ="server" ID ="userlb" Text =" "></asp:Label>
                                     </div>
                                     <div class="form-group">
                                         <label>Email Address:</label>
                                         <span>sundaresh2912@gmail.com</span>
                                         <br/>
-                                        <a href="ChangeEmail.aspx">Change Email</a>
                                     </div>
                                     <div class="form-group">
                                         <label>New Password</label>
                                         <br/>
                                         <a href="ChangePassword.aspx">Change Password</a>
                                     </div>
-                                    <div class="form-group">
-                                        <div style="position: relative;" class="icheckbox_square-green checked">
-                                            <input style="position: absolute; opacity: 0;" class="smartBox form-control" name="receive-emails" id="receive-emails" checked="" type="checkbox"/>
-                                            <ins style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;" class="iCheck-helper"></ins></div>
-                                        <label class="" for="receive-emails">Receive emails about site updates</label>
-                                    </div>
                                     <span class="help-block">We'll send you an email whenever your settings have been changed.</span>
-                                    <div class="form-group">
-                                        <input name="details-submit" class="btn btn-default" value="Update account" type="submit"/>
-                                    </div>
-                                    <input class="hide" name="token" id="token" value="9a34324acc55b02a5fd45a126cc61a60" type="hidden"/>
                                 </div>
                             </div>
                         </div>

@@ -28,8 +28,8 @@ Public Class MailSendSMTP
 
     Public Shared Sub SendEmail(ByVal reciever As String, ByVal username As String, ByVal ur As HttpRequest, ByVal state As String)
         Dim value As Integer = Int((50000 * Rnd()) + 1)
-
-
+        Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+        Dim userid As String = aCookie("userid")
 
 
         Using mm As New MailMessage("dummypira@gmail.com", reciever)
@@ -38,7 +38,7 @@ Public Class MailSendSMTP
                 mm.Body = "You have requested for a new password <br> <br>" +
                 "Please follow the below url to reset your password <br> <br>" +
                 ur.Url.GetLeftPart(UriPartial.Authority) +
-                "/AccountRecovery.aspx"
+                "/AccountRecover.aspx" + "/?" + userid
             End If
 
             If (state = "newuser") Then
@@ -53,16 +53,19 @@ Public Class MailSendSMTP
 
             End If
 
-            If (state = "orderplaced") Then
+            If (state.Contains("order")) Then
                 mm.Body =
                 "AgriPedia : One Stop for Agriculture Guide <br><br> " +
                 "Congratulations<br><br>" +
                 "Your order has been successfully placed <br> <br>"
-
-
             End If
 
-
+            If (state.Contains("password")) Then
+                mm.Body =
+                    "Your password has been changed just now. <br> <br>" +
+                " If Not changed by you, please report to us via link : " + ur.Url.GetLeftPart(UriPartial.Authority) +
+                "/Contactus.aspx"
+            End If
 
             mm.IsBodyHtml = True
             Dim smtp As New SmtpClient()

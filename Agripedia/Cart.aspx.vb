@@ -29,23 +29,31 @@ Public Class Cart
     Protected Sub BindGrid(ByVal text As Integer)
         Try
 
-            Dim subtotal As Integer = 0, totals As Integer = 0, price As Integer = 40
+            Dim subtotal As Integer = 0, totals As Integer = 0, price As Integer = 40, cartName As String = ""
             Dim dt As New DataTable()
             dt.Columns.AddRange(New DataColumn(3) {New DataColumn("ItemName"), New DataColumn("Unitprice"), New DataColumn("quantity"), New DataColumn("Subtotal")})
             Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
             Dim value As String = aCookie.Value
-
+            If (Not value.Length = 45) Then
+                value = value.Substring(0, 46)
+            End If
             Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
-            Dim cCommd As String = "Select * from anonyCart where cookie=@cookie"
+            Dim cCommd As String = ""
             Using con As New SqlConnection(constr)
                 Dim cmdObj2 As New SqlClient.SqlCommand(cCommd, con)
 
                 con.Open()
+
+                If (Session("LoggedIn").ToString.Contains("True")) Then
+                    cmdObj2.CommandText = "Select * from Cart where cookie=@cookie"
+                Else
+                    cmdObj2.CommandText = "Select * from anonyCart where cookie=@cookie"
+                End If
                 cmdObj2.Parameters.Add("@cookie", SqlDbType.NChar, 100).Value = value
                 Using readerObj As SqlDataReader = cmdObj2.ExecuteReader
+                    readerObj.Read()
 
-                    While (readerObj.HasRows())
-                        MsgBox("Read")
+                    While (readerObj.Read)
                         price = CInt(readerObj("price"))
                         Dim quant As Integer = CInt(readerObj("quantity"))
                         subtotal = price * quant
@@ -60,7 +68,7 @@ Public Class Cart
                 con.Close()
 
                 total.Text = "Total :  " + totals.ToString()
-
+                aCookie("Total") = totals
             End Using
 
         Catch ex As Exception

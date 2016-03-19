@@ -95,12 +95,15 @@
     <Content Include="AccountRecover.aspx" />
     <Content Include="Agriculture.aspx" />
     <Content Include="Cart.aspx" />
+    <Content Include="CaseStudy.aspx" />
     <Content Include="ChangeEmail.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Checkout.aspx" />
     <Content Include="checkout_Style.css" />
+    <Content Include="CommunityFor.aspx" />
     <Content Include="Contactus.aspx" />
     <Content Include="Fruits.aspx" />
+    <Content Include="MSPWeb.aspx" />
     <Content Include="Payment.aspx" />
     <Content Include="Policies.aspx" />
     <Content Include="Receipt.aspx" />
@@ -116,6 +119,7 @@
     <Content Include="Recovery.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="style.css" />
+    <Content Include="UnCulti.aspx" />
     <Content Include="UserDashBoard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -136,6 +140,13 @@
     </Compile>
     <Compile Include="Cart.aspx.vb">
       <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CaseStudy.aspx.designer.vb">
+      <DependentUpon>CaseStudy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CaseStudy.aspx.vb">
+      <DependentUpon>CaseStudy.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ChangeEmail.aspx.designer.vb">
@@ -159,6 +170,13 @@
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="CommunityFor.aspx.designer.vb">
+      <DependentUpon>CommunityFor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityFor.aspx.vb">
+      <DependentUpon>CommunityFor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Contactus.aspx.designer.vb">
       <DependentUpon>Contactus.aspx</DependentUpon>
     </Compile>
@@ -171,6 +189,13 @@
     </Compile>
     <Compile Include="Fruits.aspx.vb">
       <DependentUpon>Fruits.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MSPWeb.aspx.designer.vb">
+      <DependentUpon>MSPWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MSPWeb.aspx.vb">
+      <DependentUpon>MSPWeb.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Payment.aspx.designer.vb">
@@ -193,6 +218,13 @@
     <Compile Include="Receipt.aspx.vb">
       <DependentUpon>Receipt.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SideBarMaster.master.designer.vb">
+      <DependentUpon>SideBarMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="SideBarMaster.master.vb">
+      <DependentUpon>SideBarMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Spices_Herbs.aspx.designer.vb">
       <DependentUpon>Spices_Herbs.aspx</DependentUpon>
@@ -297,6 +329,13 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="UnCulti.aspx.designer.vb">
+      <DependentUpon>UnCulti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnCulti.aspx.vb">
+      <DependentUpon>UnCulti.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="UserDashBoard.aspx.designer.vb">
       <DependentUpon>UserDashBoard.aspx</DependentUpon>
     </Compile>
@@ -316,6 +355,7 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <Content Include="LoggedIn.Master" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -326,6 +366,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="packages.config" />
+    <Content Include="SideBarMaster.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/LoggedIn.Master" CodeBehind="Agriculture.aspx.vb" Inherits="Agripedia.Agriculture" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server" OnClick="ButtonClick">
+
+<asp:Content ID="Content1" ContentPlaceHolderID="placeholder" runat="server">
     <form runat="server">
         <div class="container-fluid">
             <div class="container">
@@ -26,7 +27,7 @@
                                                     <li><a href="Agriculture.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Kitchen Garden</a></li>
                                                     <li><a href="Spices_Herbs.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Spices & Herbs</a></li>
                                                     <li><a href="OtherVeggie.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Other Vegetables</a></li>
-                                                    <li><a href="Fruits.aspx">Fruits</a></li>
+                                                    <li><a href="Fruits.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fruits</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -45,6 +46,53 @@
                                         </ul>
                                     </li>
                                 </ul>
+                                <br />
+                            </li>
+                        </ul>
+                        <ul class="nav nav-list">
+                            <li class="divider"></li>
+                            <li>
+                                <label class="tree-toggle nav-header">Best Practices</label>
+                                <ul class="nav nav-list tree">
+                                    <li>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp Sustainable Agriculture</label>
+                                        <ul class="nav nav-list tree">
+                                            <li>
+                                                <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Biodiversity</label>
+                                                <ul class="nav nav-list tree">
+                                                    <li><a href="CommunityFor.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Community Managed Forest</a></li>
+                                                    <li><a href="Unculti.aspx">Conservation of uncultivated foods by local communities </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <label class="tree-toggle nav-header">&nbsp&nbsp&nbsp AgroBased Enterprises Agriculture</label>
+                                        <ul class="nav nav-list tree">
+                                            <li>
+                                                <label class="tree-toggle nav-header">
+                                                    <a href="CaseStudy.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Case Studies - Agro Enterprises</a></label>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <br />
+                            </li>
+                        </ul>
+                        <ul class="nav nav-list">
+                            <li class="divider"></li>
+                            <li>
+                                <label class="tree-toggle nav-header">Market Information</label>
+                                <ul class="nav nav-list tree">
+                                    <li>
+                                        <label class="tree-toggle nav-header"><a href="MarketInformation.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Mininum Support Price</a></label>
+                                    </li>
+                                    <li>
+                                        <label class="tree-toggle nav-header">
+                                            <a href="MSPWeb.aspx">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Market Information Related Websites</a></label>
+
+                                    </li>
+                                </ul>
+
                             </li>
                         </ul>
                     </div>

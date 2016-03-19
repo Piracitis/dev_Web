@@ -14,7 +14,8 @@
                 Response.Redirect("LoginPage.aspx")
             End If
         End If
-
+        Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+        userlb.Text = aCookie("userid")
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
     End Sub

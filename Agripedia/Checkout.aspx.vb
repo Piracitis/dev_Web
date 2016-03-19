@@ -17,19 +17,42 @@ Public Class Checkout
         Else
             If (Session("LoggedIn").ToString.Equals("False")) Then
                 Dim meta As HtmlMeta = New HtmlMeta()
-                Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
-
-                aCookie("check") = "True"
                 meta.HttpEquiv = "Refresh"
                 meta.Content = "5;url=" + Request.Url.GetLeftPart(UriPartial.Authority) + "/LoginPage.aspx/?q=checkout"
                 Me.Page.Controls.Add(meta)
                 alert.Text = "You are not a registered user. Please Register or log in to purchase. Redirecting to Login/Register page in 5 seconds"
             End If
+
+
         End If
 
         Dim Tstate As String = Session("LoggedIn").ToString
         Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
     End Sub
+
+    'Private Sub CopyTable()
+    '    Try
+    '        Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
+    '        Using con As New SqlConnection(constr)
+
+    '            Dim uCommd As String = "Insert into Cart select * from anonyCart"
+
+    '            Dim cmd2 As SqlCommand = New SqlCommand(uCommd, con)
+    '            con.Open()
+
+    '            cmd2.ExecuteNonQuery()
+    '            con.Close()
+    '            cmd2.CommandText = "Delete from anonyCart"
+    '            con.Open()
+    '            cmd2.ExecuteNonQuery()
+    '            con.Close()
+
+    '        End Using
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '    End Try
+
+    'End Sub
 
     Private Function Validation() As String
         Try
@@ -70,6 +93,7 @@ Public Class Checkout
                 cmd2.ExecuteNonQuery()
 
                 alertText = "Your order has been placed. It will be delivered to your location in 5 working days"
+                con.Close()
                 Return alertText
             End Using
         Catch ex As SqlException

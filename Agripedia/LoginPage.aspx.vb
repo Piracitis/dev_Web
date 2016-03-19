@@ -23,20 +23,21 @@ Public Class LoginPage
         Else
             'If logged in, redirect to userdashboard
             If (Session("LoggedIn").ToString.Equals("True")) Then
-                Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+                If (Request.QueryString("q") IsNot Nothing) Then
+                    If (Request.QueryString("q").Contains("checkout")) Then
+                        Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
 
-                If (aCookie("check").Equals("True")) Then
-                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
-                Else
-                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
+                    End If
                 End If
+                Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
+
             End If
         End If
 
 
 
         Dim Tstate As String = Session("LoggedIn").ToString
-            Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
+        Page.ClientScript.RegisterStartupScript([GetType](), "hideLogTab", "hideLogTab('" & Tstate & "');", True)
 
     End Sub
 
@@ -75,33 +76,36 @@ Public Class LoginPage
             Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
             Using con As New SqlConnection(constr)
 
-
-
-
                 Dim commd As String = "Select password from UserData where username = @userid "
                 Dim cmd As SqlCommand = New SqlCommand(commd, con)
                 con.Open()
-                cmd.Parameters.Add("@userid", SqlDbType.NChar, 10).Value = userid
-
-                Dim returnValue As String = CType(cmd.ExecuteScalar(), String)
+                cmd.Parameters.Add("@userid", SqlDbType.NChar, 15).Value = userid
+                Dim readers As SqlDataReader = cmd.ExecuteReader()
+                reader.Read()
+                Dim returnValue As String = reader("password")
 
                 If (Not passwd.Equals(returnValue)) Then
                     Session("LoggedIn") = "True"
 
                     con.Close()
-                    Session("username") = username
+                    cmd.CommandText = "Select email_id from UserData where username = @userid"
+                    cmd.Parameters.Add("@userid", SqlDbType.NChar, 15).Value = userid
+                    Dim reader As SqlDataReader = cmd.ExecuteReader()
+                    reader.Read()
 
                     Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
                     aCookie("userid") = userid
+                    aCookie("emailid") = reader("email_id").ToString()
+                    con.Close()
+                    If (Request.QueryString("q") IsNot Nothing) Then
+                        If (Request.QueryString("q").Contains("checkout")) Then
+                            Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
 
-                    If (aCookie("check").Equals("True")) Then
-                        Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/Checkout.aspx")
-                    Else
-                        Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
+                        End If
                     End If
-
-
+                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Authority) + "/UserDashBoard.aspx")
                 Else
+                    con.Close()
                     alertText = "Username or Password is invalid"
                     alert.Text = alertText
                 End If

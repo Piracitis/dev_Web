@@ -25,51 +25,60 @@ Public Class ChangePassword1
         Dim cpasswd As String, npasswd As String, cnpasswd As String, alertText As String = ""
 
         cpasswd = Password1.Value
-        npasswd = Password1.Value
-        cnpasswd = Password1.Value
+        npasswd = Password2.Value
+        cnpasswd = Password3.Value
         If (Not npasswd.Equals(cnpasswd)) Then
             alertText = "Enter same New password"
-        End If
+        Else
+            Try
+                Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
+                Using con As New SqlConnection(constr)
+                    Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
+                    Dim userid As String = aCookie("userid")
+                    Dim uCommd As String = "Select password from UserData where username=@userid"
 
-        Try
-            Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
-            Using con As New SqlConnection(constr)
-                Dim aCookie As HttpCookie = HttpContext.Current.Request.Cookies("guid")
-                Dim userid As String = aCookie("userid")
-                Dim uCommd As String = "Select password from UserData where username = '@userid'"
+                    Dim cmd2 As SqlCommand = New SqlCommand(uCommd, con)
+                    con.Open()
+                    cmd2.Parameters.Add("userid", SqlDbType.NChar, 15).Value = userid
 
-                Dim cmd2 As SqlCommand = New SqlCommand(uCommd, con)
-                con.Open()
-                cmd2.Parameters.Add("userid", SqlDbType.NChar, 10).Value = userid
-
-                Dim returnValue As String = CType(cmd2.ExecuteScalar, String)
-                If (Not returnValue Is Nothing) Then
-                    alertText = "Invalid Password"
-                End If
-
-                If (Not cpasswd.Equals(cpasswd)) Then
-                    If (alertText.Equals("")) Then
-                        alertText = "<br>Password doesnt match with database"
+                    Dim reader As SqlDataReader = cmd2.ExecuteReader()
+                    reader.Read()
+                    Dim returnValue As String = reader("password").ToString()
+                    If (returnValue Is Nothing) Then
+                        alertText = "Invalid Password"
                     End If
 
-                Else
-                    con.Close()
-                    cmd2.CommandText = "Update userdata set password = " + npasswd
-                    con.Open()
-                    cmd2.ExecuteScalar()
-                    alertText = "Password Changed Successfully"
+                    If (Not cpasswd.Equals(cpasswd)) Then
+                        If (alertText.Equals("")) Then
+                            alertText = "<br>Password doesnt match with database"
+                        End If
+
+                    Else
+                        con.Close()
+                        cmd2.CommandText = "Update userdata set password=@pass"
+                        cmd2.Parameters.Add("pass", SqlDbType.NChar, 20).Value = npasswd
+                        con.Open()
+                        cmd2.ExecuteScalar()
+                        alertText = "Password Changed Successfully"
+                        con.Close()
+                    End If
+                    alert.Text = alertText
+                    If (alertText.Contains("Successfully")) Then
+                        Dim client As MailSendSMTP = New MailSendSMTP
+                        client.SendEmail(aCookie("emailid").ToString, "", Request, "password changed")
+                    End If
                     Page.ClientScript.RegisterStartupScript([GetType](), "changeAlert", "changeAlert('" & "valid" & "');", True)
-                End If
-
-                alert.Text = alertText
 
 
-            End Using
-        Catch ex As SqlException
+                End Using
+            Catch ex As SqlException
 
-        Finally
+            Finally
 
-        End Try
+            End Try
+        End If
+
+
 
 
     End Sub

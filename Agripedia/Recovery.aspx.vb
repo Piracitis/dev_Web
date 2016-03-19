@@ -16,7 +16,7 @@ Public Class Recovery
                 Dim meta As HtmlMeta = New HtmlMeta()
 
                 meta.HttpEquiv = "Refresh"
-                meta.Content = "3;url=Dashboard.aspx"
+                meta.Content = "3;url=UserDashboard.aspx"
                 Me.Page.Controls.Add(meta)
                 alert.Text = "You have already been logged in. Please logout first. Redirecting to Dashboard in 3 seconds"
             End If
@@ -42,7 +42,6 @@ Public Class Recovery
         Try
 
             Dim email_id = email.Value
-            MsgBox(email_id)
             Dim alertText As String = ""
             Dim constr As String = ConfigurationManager.ConnectionStrings("conStr").ConnectionString
             Using con As New SqlConnection(constr)
@@ -54,7 +53,6 @@ Public Class Recovery
                 cmd2.Parameters.Add("email", SqlDbType.NChar, 20).Value = email_id
 
                 Dim returnValue As String = cmd2.ExecuteReader.ToString
-                MsgBox(returnValue)
                 If (returnValue Is Nothing) Then
                     alertText = "Email ID doesn't exists.<br> Please enter registered email-id"
                     Return alertText
